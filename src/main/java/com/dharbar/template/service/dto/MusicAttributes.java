@@ -3,20 +3,15 @@ package com.dharbar.template.service.dto;
 import lombok.Builder;
 import lombok.Value;
 
+import java.util.List;
+
 @Builder(toBuilder = true)
 @Value
 public class MusicAttributes {
 
-    private String author;
-    private String song;
-
-    private Boolean bigAttitude;
-    private Boolean aThink;
-    private Boolean aSad;
-    private Boolean aHate;
-    private Boolean canSleep;
-    private Boolean swing;
-    private Boolean move;
-    private Boolean classic;
+    private List<String> artists;
+    private List<String> genres;
+    private List<String> tags;
+    private Boolean love;
 }
 

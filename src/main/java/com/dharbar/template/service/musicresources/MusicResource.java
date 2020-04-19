@@ -7,7 +7,9 @@ import reactor.core.publisher.Mono;
 
 public interface MusicResource {
 
+    Mono<MusicAsResource> findMelody(String artist, String songName);
+
     Flux<MusicAsResource> findByArtist(String artist);
 
-    Mono<MusicAsResource> findByMusicAttributes(MusicAttributes musicAttributes);
+    Flux<MusicAsResource> findByMusicAttributes(MusicAttributes musicAttributes);
 }

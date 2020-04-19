@@ -5,17 +5,17 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Stream;
 
 @Service
 public class ItunesMusicAttributesMapper {
 
-    public List<NameValuePair> mapMusicAttributes(MusicAttributes musicAttributes){
+    public List<NameValuePair> mapMusicAttributes(MusicAttributes musicAttributes) {
         final List<NameValuePair> nameValuePairs = new ArrayList<>();
 
         prepareTerm(musicAttributes).ifPresent(nameValuePairs::add);
@@ -26,15 +26,29 @@ public class ItunesMusicAttributesMapper {
         return nameValuePairs;
     }
 
-    public List<NameValuePair> mapArtist(String artist){
+    public List<NameValuePair> mapMelody(String artist, String songName) {
+        final String term = StringUtils.trimToEmpty(String.format("%s %s", artist, songName));
+        return StringUtils.isBlank(term)
+                ? Collections.emptyList()
+                : Collections.singletonList(new BasicNameValuePair("term", term));
+    }
+
+    public List<NameValuePair> mapArtist(String artist) {
         return Collections.singletonList(new BasicNameValuePair("term", artist));
     }
 
-    private Optional<BasicNameValuePair> prepareTerm(MusicAttributes musicAttributes){
-        final String author = StringUtils.trimToEmpty(musicAttributes.getAuthor());
-        final String songName = StringUtils.trimToEmpty(musicAttributes.getSong());
-        final String term = StringUtils.trimToEmpty(String.format("%s %s", author, songName));
-        return StringUtils.isBlank(term) ? Optional.empty() : Optional.of(new BasicNameValuePair("term", term));
+    private Optional<BasicNameValuePair> prepareTerm(MusicAttributes musicAttributes) {
+        final List<String> artists = musicAttributes.getArtists();
+        if (CollectionUtils.isEmpty(artists)) {
+            return Optional.empty();
+        }
+
+        // TODO parse multiple and create req
+        return artists.stream()
+                .map(StringUtils::trimToEmpty)
+                .filter(StringUtils::isNotBlank)
+                .map(artist -> new BasicNameValuePair("term", artist))
+                .findFirst();
     }
 
     // TODO Attribute

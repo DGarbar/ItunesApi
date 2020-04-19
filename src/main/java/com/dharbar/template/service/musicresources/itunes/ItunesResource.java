@@ -32,9 +32,16 @@ public class ItunesResource implements MusicResource {
     }
 
     @Override
-    public Mono<MusicAsResource> findByMusicAttributes(MusicAttributes musicAttributes) {
-        final List<NameValuePair> params = musicAttributesMapper.mapMusicAttributes(musicAttributes);
+    public Mono<MusicAsResource> findMelody(String artist, String songName) {
+        final List<NameValuePair> params = musicAttributesMapper.mapMelody(artist, songName);
         return itunesRequester.requestOne(params)
+                .map(this::mapToDto);
+    }
+
+    @Override
+    public Flux<MusicAsResource> findByMusicAttributes(MusicAttributes musicAttributes) {
+        final List<NameValuePair> params = musicAttributesMapper.mapMusicAttributes(musicAttributes);
+        return itunesRequester.request(params)
                 .map(this::mapToDto);
     }
 

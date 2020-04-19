@@ -1,0 +1,3008 @@
+[
+  {
+    "author": "303 Каратиста",
+    "songs": [
+      {
+        "song": "Опиум",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Aaron Smith",
+    "songs": [
+      {
+        "song": "Dancin",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Aerosmith",
+    "songs": [
+      {
+        "song": "Dream On",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Aine Cahill",
+    "songs": [
+      {
+        "song": "Beauty Is A Lie",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Alex Clare",
+    "songs": [
+      {
+        "song": "Damn Your Eyes",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Alice Merton",
+    "songs": [
+      {
+        "song": "No Roots",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Alt J",
+    "songs": [
+      {
+        "song": "Bloodflood",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Ane Brun",
+    "songs": [
+      {
+        "song": "Big In Japan",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Ariana Grande",
+    "songs": [
+      {
+        "song": "7 Rings",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Asking Alexandria",
+    "songs": [
+      {
+        "song": "Alone In A Room",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Bazzi",
+    "songs": [
+      {
+        "song": "Beautiful",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Beethoven",
+    "songs": [
+      {
+        "song": "Лунная Соната",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Billie Eilish",
+    "songs": [
+      {
+        "song": "Come Out And Play",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Bad Guy",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Black Lab",
+    "songs": [
+      {
+        "song": "Burn Out",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Blonde Redhead",
+    "songs": [
+      {
+        "song": "For The Damaged",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Bob Moses",
+    "songs": [
+      {
+        "song": "Enough To Believe",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Boogrov",
+    "songs": [
+      {
+        "song": "I Miss The Colors",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Boston Manor",
+    "songs": [
+      {
+        "song": "Bad Machine",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": true,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Bring Me The Horizon",
+    "songs": [
+      {
+        "song": "Run",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Doomed",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Caravan Palace",
+    "songs": [
+      {
+        "song": "Lone Digger",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Wonderland",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Cattarse",
+    "songs": [
+      {
+        "song": "Walking On Glass",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "You Blew My Mind",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Chopin",
+    "songs": [
+      {
+        "song": "Венский Вальс",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": true
+      },
+      {
+        "song": "Revolutionary Etude",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": true
+      },
+      {
+        "song": "Вальс № 10",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": true
+      },
+      {
+        "song": "Valse Op 64 № 2",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Chris De Burgh",
+    "songs": [
+      {
+        "song": "The Lady In Red",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Chris Isaak",
+    "songs": [
+      {
+        "song": "Wicked Game",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Christine And The Queens",
+    "songs": [
+      {
+        "song": "5 Dollars",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Chuck Berry",
+    "songs": [
+      {
+        "song": "Johnny B Goode",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Chvrches",
+    "songs": [
+      {
+        "song": "My Enemy",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Cirque Du Soleil",
+    "songs": [
+      {
+        "song": "Querer",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Citizen Cope",
+    "songs": [
+      {
+        "song": "Salvation",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Cold War Kids",
+    "songs": [
+      {
+        "song": "Love Is Mystical",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Cream Soda",
+    "songs": [
+      {
+        "song": "Kto Ty",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Crx",
+    "songs": [
+      {
+        "song": "Broken Bones",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Cyn",
+    "songs": [
+      {
+        "song": "Believer",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Dean Lewis",
+    "songs": [
+      {
+        "song": "Be Alright",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Des Rocs",
+    "songs": [
+      {
+        "song": "Used To The Darkness",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Die Antwoord",
+    "songs": [
+      {
+        "song": "Happy Go Sucky Fucky",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      },
+      {
+        "song": "Cookie Thumper",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      },
+      {
+        "song": "Babys On Fire",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      },
+      {
+        "song": "Stoopid Rich",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Elderbrook",
+    "songs": [
+      {
+        "song": "Good Enough",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Ella Fitzgerald",
+    "songs": [
+      {
+        "song": "Fiva",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Elliot Moss",
+    "songs": [
+      {
+        "song": "Slip",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Closedloop",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Eminem",
+    "songs": [
+      {
+        "song": "Lucky You",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": true,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Fhin",
+    "songs": [
+      {
+        "song": "But Now A Warm Feel Is Running",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Fka Twigs",
+    "songs": [
+      {
+        "song": "Cellophane",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Frank Sinatra",
+    "songs": [
+      {
+        "song": "My Way",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "French Montana",
+    "songs": [
+      {
+        "song": "No Stylist",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Ghostemane",
+    "songs": [
+      {
+        "song": "Venom",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": true,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Ghostly Kisses",
+    "songs": [
+      {
+        "song": "Empty Note",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Gnarls Barkley",
+    "songs": [
+      {
+        "song": "Crazy",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Governors",
+    "songs": [
+      {
+        "song": "Is This Love",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Grandson",
+    "songs": [
+      {
+        "song": "Blood Water",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": true,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Hayden James",
+    "songs": [
+      {
+        "song": "Better Together",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Hozier",
+    "songs": [
+      {
+        "song": "Dinner And Diatribes",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Movement",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Hypnogaja",
+    "songs": [
+      {
+        "song": "Silver Star",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "I Am Joffrey And Tim Schaufert",
+    "songs": [
+      {
+        "song": "All Of Me",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "I Am Kloot",
+    "songs": [
+      {
+        "song": "Avenue Of Hope",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Hold Back The Night",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Ic3peak",
+    "songs": [
+      {
+        "song": "Смерти Больше Нет",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aHate": true,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Сказка",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aHate": true,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Imagine Dragons",
+    "songs": [
+      {
+        "song": "I Dont Know Why",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      },
+      {
+        "song": "Natural",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      },
+      {
+        "song": "Thunder",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Believer",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Irma Thomas",
+    "songs": [
+      {
+        "song": "Anyone Who Knows What Love Is",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Jack White",
+    "songs": [
+      {
+        "song": "Love Is Blindness",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Jade Bird",
+    "songs": [
+      {
+        "song": "Uh Huh",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Jaden Smith",
+    "songs": [
+      {
+        "song": "Watch Me",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Jah Khalib",
+    "songs": [
+      {
+        "song": "Медина",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Jax Jones",
+    "songs": [
+      {
+        "song": "Ring Ring",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Jessie Ware",
+    "songs": [
+      {
+        "song": "Running",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Joji",
+    "songs": [
+      {
+        "song": "Slow Dancing In The Dark",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Joyner Lucas",
+    "songs": [
+      {
+        "song": "I Love",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": true,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Jungle",
+    "songs": [
+      {
+        "song": "Casio",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Justin Jay",
+    "songs": [
+      {
+        "song": "Climbing Trees",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Kai Rosenkranz",
+    "songs": [
+      {
+        "song": "Vista Point",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Kaleida",
+    "songs": [
+      {
+        "song": "Take Me To The River",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Aliaa",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Think",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Kazka",
+    "songs": [
+      {
+        "song": "Плакала",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Kuroiumi",
+    "songs": [
+      {
+        "song": "Asleep",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Passion",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Kyle Landry",
+    "songs": [
+      {
+        "song": "For The Damaged Coda",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Lalaland",
+    "songs": [
+      {
+        "song": "City Of Stars",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Lana Del Rey",
+    "songs": [
+      {
+        "song": "Hope Is A Dangerous Thing For A Woman Like Me",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Lastlings",
+    "songs": [
+      {
+        "song": "Urges",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Laud",
+    "songs": [
+      {
+        "song": "Waiting",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Lil Wayne",
+    "songs": [
+      {
+        "song": "Mona Lisa",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Linkin Park",
+    "songs": [
+      {
+        "song": "Numb",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": true,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "From The Inside",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Logic",
+    "songs": [
+      {
+        "song": "44 More",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Lost Frequencies",
+    "songs": [
+      {
+        "song": "Melody",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Lp",
+    "songs": [
+      {
+        "song": "Tightrope",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "When Were High",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Lubomyr Melnyk",
+    "songs": [
+      {
+        "song": "Requiem For A Fallen Tree",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Ludovico Einaudi",
+    "songs": [
+      {
+        "song": "Walk",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": true
+      },
+      {
+        "song": "Fly",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": true
+      },
+      {
+        "song": "Experience",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Luigi Rubino",
+    "songs": [
+      {
+        "song": "Les Larmes Dautomne",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Mark Ronson",
+    "songs": [
+      {
+        "song": "Nothing Breaks Like A Heart",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Maruv",
+    "songs": [
+      {
+        "song": "Looking For You",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": true,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Focus On Me",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": true,
+        "classic": false
+      },
+      {
+        "song": "Black Water",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Maruv And Boosin",
+    "songs": [
+      {
+        "song": "Drunk Groove",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Max Richter",
+    "songs": [
+      {
+        "song": "November",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Melody Gardot",
+    "songs": [
+      {
+        "song": "Baby Im A Fool",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Men I Trust",
+    "songs": [
+      {
+        "song": "System",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Mj Cole And Freya Ridings",
+    "songs": [
+      {
+        "song": "Waking Up",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Movement",
+    "songs": [
+      {
+        "song": "Us",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Mumford And Sons",
+    "songs": [
+      {
+        "song": "If I Say",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Muse",
+    "songs": [
+      {
+        "song": "Pressure",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "My Chemical Romance",
+    "songs": [
+      {
+        "song": "The Sharpest Lives",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Nbsplv",
+    "songs": [
+      {
+        "song": "Cold Waves",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Nemea And Palastic",
+    "songs": [
+      {
+        "song": "Open Window",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Nf",
+    "songs": [
+      {
+        "song": "Why",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Nothing But Thieves",
+    "songs": [
+      {
+        "song": "Take This Lonely Heart",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Onerepublic",
+    "songs": [
+      {
+        "song": "Wherever I Go",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Otzeki",
+    "songs": [
+      {
+        "song": "Falling Out",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Ozzy Osbourne",
+    "songs": [
+      {
+        "song": "I Just Want You",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": true,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Panic! At The Disco",
+    "songs": [
+      {
+        "song": "Girl That You Love",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Paolo Nutini",
+    "songs": [
+      {
+        "song": "One Day",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Iron Sky",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Patricia Kaas",
+    "songs": [
+      {
+        "song": "Avec Le Temps",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Poets Of The Fall",
+    "songs": [
+      {
+        "song": "Temple Of Thought",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Sleep, Sugar",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Dawn",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Carnival Of Rust",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Where Do We Draw The Line",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Portugal. The Man",
+    "songs": [
+      {
+        "song": "Mr Lonely",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Feel It Still",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Post Malone",
+    "songs": [
+      {
+        "song": "Better Now",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Rockstar",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Post Malone And Swae Lee",
+    "songs": [
+      {
+        "song": "Sunflower",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Pouya",
+    "songs": [
+      {
+        "song": "1000 Rounds",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Puscifer",
+    "songs": [
+      {
+        "song": "Rev 22 20",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": true,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "The Undertaker",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": true,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Radiohead",
+    "songs": [
+      {
+        "song": "Everything In Its Right Place",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Daydreaming",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Ramin Djawadi",
+    "songs": [
+      {
+        "song": "Light Of The Seven",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Remo Giazotto",
+    "songs": [
+      {
+        "song": "Adagio Albioni",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Rompasso",
+    "songs": [
+      {
+        "song": "Ignis",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Saint Jhn",
+    "songs": [
+      {
+        "song": "Roses",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Sarah Mclachlan",
+    "songs": [
+      {
+        "song": "Gloomy Sunday",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Sasha Daniel",
+    "songs": [
+      {
+        "song": "Bleeding Rain",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Seether",
+    "songs": [
+      {
+        "song": "Careless Whisper",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Seth Xvi",
+    "songs": [
+      {
+        "song": "Amazones",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "She Keeps Bees",
+    "songs": [
+      {
+        "song": "Calm Walk In The Dark",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Radiance",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Sigrid",
+    "songs": [
+      {
+        "song": "Everybody Knows",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Simon And Garfunkel",
+    "songs": [
+      {
+        "song": "The Sound Of Silence",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Sir Mix A Lot",
+    "songs": [
+      {
+        "song": "Baby Got Back",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Son Lux",
+    "songs": [
+      {
+        "song": "Surrounded",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Aquatic",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Sting",
+    "songs": [
+      {
+        "song": "Until",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Shape Of My Heart",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Syml",
+    "songs": [
+      {
+        "song": "Fear Of A Water",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Clean Eyes",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Talos",
+    "songs": [
+      {
+        "song": "Landscapes",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "The Atomica Project",
+    "songs": [
+      {
+        "song": "Into The Arms Of Strangers",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "The Ink Spots",
+    "songs": [
+      {
+        "song": "Address Unknown",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "The Killers",
+    "songs": [
+      {
+        "song": "The Man",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "The Rolling Stones",
+    "songs": [
+      {
+        "song": "Laugh I Nearly Died",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "The Weeknd",
+    "songs": [
+      {
+        "song": "Call Out My Name",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Thelonious Monk",
+    "songs": [
+      {
+        "song": "The Man I Love",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Three Days Grace",
+    "songs": [
+      {
+        "song": "I Hate Everything About You",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": true,
+        "aHate": true,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Twenty One Pilots",
+    "songs": [
+      {
+        "song": "Nico And The Niners",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      },
+      {
+        "song": "Message Man",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Tyga Nicki Minaj",
+    "songs": [
+      {
+        "song": "Dip",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": true,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Unlike Pluto",
+    "songs": [
+      {
+        "song": "Let It Bleed",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Everything Black",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": true,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Vivaldi",
+    "songs": [
+      {
+        "song": "Winter",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": true
+      },
+      {
+        "song": "Оркестром Ля Минор Часть I",
+        "bigAttitude": false,
+        "aThink": false,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Xxxtentacion",
+    "songs": [
+      {
+        "song": "The Remedy For A Broken Heart",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      },
+      {
+        "song": "Schizophrenia",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": true,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Yiruma",
+    "songs": [
+      {
+        "song": "Love Hurts",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Yonuka",
+    "songs": [
+      {
+        "song": "Own Worst Enemy",
+        "bigAttitude": true,
+        "aThink": false,
+        "aSad": false,
+        "aHate": true,
+        "canSleep": false,
+        "swing": false,
+        "move": true,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Лиза Громова",
+    "songs": [
+      {
+        "song": "Перегрызут",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Луна",
+    "songs": [
+      {
+        "song": "Jukebox",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": false,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Мальбэк",
+    "songs": [
+      {
+        "song": "Равнодушие",
+        "bigAttitude": false,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Мария Чайковская",
+    "songs": [
+      {
+        "song": "В Комнате Цветных",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  },
+  {
+    "author": "Прокофьев",
+    "songs": [
+      {
+        "song": "Organ Prelude And Fugue In Dmoll",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": true,
+        "swing": false,
+        "move": false,
+        "classic": true
+      }
+    ]
+  },
+  {
+    "author": "Сплин",
+    "songs": [
+      {
+        "song": "Феллини",
+        "bigAttitude": true,
+        "aThink": true,
+        "aSad": true,
+        "aLoud": false,
+        "aHate": false,
+        "canSleep": false,
+        "swing": false,
+        "move": false,
+        "classic": false
+      }
+    ]
+  }
+]
