@@ -18,6 +18,9 @@
   <properties>
     <java.version>11</java.version>
 
+    <org.apache.httpcomponents.httpclient.version>4.5.10</org.apache.httpcomponents.httpclient.version>
+    <commons-collections.version>3.2.1</commons-collections.version>
+
     <!-- plugin versions -->
     <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
     <maven-checkstyle-plugin.version>3.1.0</maven-checkstyle-plugin.version>
@@ -31,10 +34,33 @@
     </dependency>
 
     <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-webflux</artifactId>
+    </dependency>
+
+    <!-- UTILS -->
+    <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <optional>true</optional>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <version>${commons-collections.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+    </dependency>
+
 
     <!-- TEST -->
     <dependency>
@@ -49,11 +75,6 @@
       </exclusions>
     </dependency>
 
-    <!-- utils  -->
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
-    </dependency>
 
     <!-- junit 5 -->
     <dependency>
@@ -78,6 +99,7 @@
       <artifactId>assertj-core</artifactId>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
 
 

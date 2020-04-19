@@ -1,0 +1,14 @@
+
+
+
+
+
+
+itunes:
+  search:
+    url:
+      host: "https://itunes.apple.com"
+      entity: "musicTrack"
+      media: "music"
+      limit: 3
+      explicit: "no"
