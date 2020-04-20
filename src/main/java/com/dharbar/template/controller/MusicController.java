@@ -1,6 +1,6 @@
 package com.dharbar.template.controller;
 
-import com.dharbar.template.service.dto.MusicAttributes;
+import com.dharbar.template.controller.dto.MusicAttributes;
 import com.dharbar.template.service.musicresources.MusicResource;
 import com.dharbar.template.service.musicresources.dto.MusicAsResource;
 import lombok.AllArgsConstructor;
@@ -26,7 +26,7 @@ public class MusicController {
     }
 
     @GetMapping
-    private Flux<MusicAsResource> findByArtist(@RequestAttribute String artist) {
+    private Flux<MusicAsResource> findBy(@RequestAttribute String artist) {
         return musicResource.findByArtist(artist);
     }
 

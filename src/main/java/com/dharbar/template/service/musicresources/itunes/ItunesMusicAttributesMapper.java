@@ -1,6 +1,6 @@
 package com.dharbar.template.service.musicresources.itunes;
 
-import com.dharbar.template.service.dto.MusicAttributes;
+import com.dharbar.template.controller.dto.MusicAttributes;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;

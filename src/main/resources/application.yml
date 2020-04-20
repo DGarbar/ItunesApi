@@ -1,14 +1,13 @@
+spring:
+  data:
+    mongodb:
+      #      mongodb://<user>:<passwd>@<host>:<port>/<dbname>
+      uri:  mongodb+srv://dharbar:${MONGO_DB_PASS}@musictags-tgemi.gcp.mongodb.net/music?retryWrites=true&w=majority
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
-
-
-
-
-itunes:
-  search:
-    url:
-      host: "https://itunes.apple.com"
-      entity: "musicTrack"
-      media: "music"
-      limit: 3
-      explicit: "no"
+logging.level.org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG

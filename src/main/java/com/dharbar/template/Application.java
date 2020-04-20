@@ -3,9 +3,11 @@ package com.dharbar.template;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 
 @SuppressWarnings("checkstyle:hideutilityclassconstructor")
 @SpringBootApplication
+@EnableReactiveMongoRepositories
 @EnableConfigurationProperties
 public class Application {
 

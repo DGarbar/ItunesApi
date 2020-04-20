@@ -1,4 +1,4 @@
-package com.dharbar.template.service.dto;
+package com.dharbar.template.controller.dto;
 
 import lombok.Builder;
 import lombok.Value;
@@ -12,6 +12,5 @@ public class MusicAttributes {
     private List<String> artists;
     private List<String> genres;
     private List<String> tags;
-    private Boolean love;
 }
 

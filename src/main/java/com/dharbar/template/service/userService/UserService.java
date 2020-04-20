@@ -1,8 +1,8 @@
 package com.dharbar.template.service.userService;
 
-import com.dharbar.template.repo.user.UserRepository;
-import com.dharbar.template.repo.user.model.UserEntity;
 import com.dharbar.template.service.userService.dto.User;
+import com.dharbar.template.service.userService.repo.UserRepository;
+import com.dharbar.template.service.userService.repo.model.UserEntity;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;

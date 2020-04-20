@@ -1,6 +1,6 @@
 package com.dharbar.template.service.musicresources.itunes;
 
-import com.dharbar.template.service.dto.MusicAttributes;
+import com.dharbar.template.controller.dto.MusicAttributes;
 import com.dharbar.template.service.musicresources.MusicResource;
 import com.dharbar.template.service.musicresources.dto.MusicAsResource;
 import com.dharbar.template.service.musicresources.itunes.dto.ItunesResult;
