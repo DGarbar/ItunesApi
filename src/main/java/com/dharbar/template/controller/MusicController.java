@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -26,7 +27,7 @@ public class MusicController {
     }
 
     @GetMapping
-    private Flux<MusicAsResource> findBy(@RequestAttribute String artist) {
+    private Flux<MusicAsResource> findBy(@RequestParam String artist) {
         return musicResource.findByArtist(artist);
     }
 

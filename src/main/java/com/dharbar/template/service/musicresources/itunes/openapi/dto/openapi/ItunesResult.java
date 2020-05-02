@@ -1,4 +1,4 @@
-package com.dharbar.template.service.musicresources.itunes.dto;
+package com.dharbar.template.service.musicresources.itunes.openapi.dto.openapi;
 
 import lombok.Builder;
 import lombok.Value;
@@ -15,7 +15,7 @@ public class ItunesResult {
     private String trackViewUrl;
     // Real m4a
     private String previewUrl;
-    private Float trackTimeMillis;
+    private Long trackTimeMillis;
     private String primaryGenreName;
 
     private String wrapperType;

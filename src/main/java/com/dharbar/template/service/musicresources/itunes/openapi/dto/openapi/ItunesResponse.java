@@ -1,12 +1,10 @@
-package com.dharbar.template.service.musicresources.itunes.dto;
+package com.dharbar.template.service.musicresources.itunes.openapi.dto.openapi;
 
-import lombok.AllArgsConstructor;
 import lombok.Value;
 
 import java.util.List;
 
-@AllArgsConstructor
-@Value
+@Value(staticConstructor = "of")
 public class ItunesResponse {
 
     private Integer resultCount;

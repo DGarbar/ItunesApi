@@ -1,17 +1,13 @@
-package com.dharbar.template.service.musicresources.itunes.dto;
+package com.dharbar.template.service.musicresources.itunes.openapi.dto.openapi;
 
-import lombok.AllArgsConstructor;
 import lombok.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
 
-@AllArgsConstructor
-@Value
+@Value(staticConstructor = "of")
 //@ConfigurationProperties(prefix = "itunes.search.url")
 //@Component
 public class ItunesSearchUrl {

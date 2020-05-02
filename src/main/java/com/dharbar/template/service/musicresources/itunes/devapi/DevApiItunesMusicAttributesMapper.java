@@ -1,4 +1,4 @@
-package com.dharbar.template.service.musicresources.itunes;
+package com.dharbar.template.service.musicresources.itunes.devapi;
 
 import com.dharbar.template.controller.dto.MusicAttributes;
 import org.apache.commons.lang3.StringUtils;
@@ -13,16 +13,25 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ItunesMusicAttributesMapper {
+public class DevApiItunesMusicAttributesMapper {
 
     public List<NameValuePair> mapMusicAttributes(MusicAttributes musicAttributes) {
-        final List<NameValuePair> nameValuePairs = new ArrayList<>();
-
+        final List<NameValuePair> nameValuePairs = getDefault();
         prepareTerm(musicAttributes).ifPresent(nameValuePairs::add);
 
-        nameValuePairs.add(new BasicNameValuePair("entity", "song"));
-        nameValuePairs.add(new BasicNameValuePair("media", "music"));
-        nameValuePairs.add(new BasicNameValuePair("explicit", "no"));
+        return nameValuePairs;
+    }
+
+    private List<NameValuePair> getDefault() {
+        List<NameValuePair> nameValuePairs = new ArrayList<>();
+
+        nameValuePairs.add(new BasicNameValuePair("types", "songs"));
+        return nameValuePairs;
+    }
+
+    private List<NameValuePair> getDefault(NameValuePair nameValuePair) {
+        List<NameValuePair> nameValuePairs = getDefault();
+        nameValuePairs.add(nameValuePair);
         return nameValuePairs;
     }
 
@@ -30,15 +39,15 @@ public class ItunesMusicAttributesMapper {
         final String term = StringUtils.trimToEmpty(String.format("%s %s", artist, songName));
         return StringUtils.isBlank(term)
                 ? Collections.emptyList()
-                : Collections.singletonList(new BasicNameValuePair("term", term));
+                : getDefault(new BasicNameValuePair("term", term));
     }
 
     public List<NameValuePair> mapArtist(String artist) {
-        return Collections.singletonList(new BasicNameValuePair("term", artist));
+        return getDefault(new BasicNameValuePair("term", artist));
     }
 
     private Optional<BasicNameValuePair> prepareTerm(MusicAttributes musicAttributes) {
-        final List<String> artists = musicAttributes.getArtists();
+        var artists = musicAttributes.getArtists();
         if (CollectionUtils.isEmpty(artists)) {
             return Optional.empty();
         }
@@ -51,6 +60,5 @@ public class ItunesMusicAttributesMapper {
                 .findFirst();
     }
 
-    // TODO Attribute
     // TODO Attribute
 }

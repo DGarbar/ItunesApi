@@ -1,13 +1,11 @@
-package com.dharbar.template.service.musicresources.itunes;
+package com.dharbar.template.service.musicresources.itunes.openapi;
 
-import com.dharbar.template.service.musicresources.itunes.dto.ItunesResponse;
-import com.dharbar.template.service.musicresources.itunes.dto.ItunesResult;
+import com.dharbar.template.service.musicresources.itunes.openapi.dto.openapi.ItunesResponse;
+import com.dharbar.template.service.musicresources.itunes.openapi.dto.openapi.ItunesResult;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.message.BasicNameValuePair;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -21,7 +19,7 @@ import java.util.List;
 
 @Slf4j
 @Service
-public class ItunesRequester {
+public class OpenApiItunesRequester {
 
     private final URIBuilder searchUriBuilder = new URIBuilder()
             .setScheme("https")
@@ -31,27 +29,23 @@ public class ItunesRequester {
     private final ObjectMapper objectMapper;
     private final WebClient.Builder webClientBuilder;
 
-    public ItunesRequester(WebClient.Builder webClientBuilder, ObjectMapper objectMapper) {
+    public OpenApiItunesRequester(WebClient.Builder webClientBuilder, ObjectMapper objectMapper) {
         this.webClientBuilder = webClientBuilder;
         this.objectMapper = objectMapper;
     }
 
     public Flux<ItunesResult> request(List<NameValuePair> params) {
-        return requestLimited(params, 20);
-    }
-
-    public Flux<ItunesResult> request(List<NameValuePair> params, int limit) {
-        return requestLimited(params, limit);
+        return requestLimited(params);
     }
 
     public Mono<ItunesResult> requestOne(List<NameValuePair> params) {
-        return requestLimited(params, 1).singleOrEmpty();
+        return requestLimited(params).singleOrEmpty();
     }
 
-    private Flux<ItunesResult> requestLimited(List<NameValuePair> params, int limit) {
+    private Flux<ItunesResult> requestLimited(List<NameValuePair> params) {
         try {
             URI searchUrl = searchUriBuilder
-                    .addParameter("limit", String.valueOf(limit))
+//                    .addParameter("limit", String.valueOf(limit))
                     .addParameters(params)
                     .build();
             log.info("sending to Itunes uri {}", searchUrl.toString());
@@ -60,19 +54,19 @@ public class ItunesRequester {
                     .accept(MediaType.valueOf(MediaType.TEXT_PLAIN_VALUE))
                     .retrieve()
                     .bodyToMono(String.class)
-                    .flatMapMany(s -> getItunesResponse(s, limit));
+                    .flatMapMany(this::getItunesResponse);
         } catch (URISyntaxException e) {
             return Flux.error(e);
         }
     }
 
-    private Flux<ItunesResult> getItunesResponse(String s, Integer limit) {
+    private Flux<ItunesResult> getItunesResponse(String rawItunesResponse) {
         try {
-            final ItunesResponse itunesResponse = objectMapper.readValue(s, ItunesResponse.class);
+            final ItunesResponse itunesResponse = objectMapper.readValue(rawItunesResponse, ItunesResponse.class);
             final List<ItunesResult> itunesResults = itunesResponse.getResults();
-            return Flux.fromIterable(itunesResults).take(limit);
+            return Flux.fromIterable(itunesResults);
         } catch (IOException e) {
-            throw new IllegalArgumentException("Cant deserialize: " + s, e);
+            throw new IllegalArgumentException("Cant deserialize: " + rawItunesResponse, e);
         }
     }
 }

@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      #      mongodb://<user>:<passwd>@<host>:<port>/<dbname>
+      uri:  mongodb+srv://dharbar:${MONGO_DB_PASS}@${MONGO_DB_HOST}/music?retryWrites=true&w=majority

@@ -1,13 +1,14 @@
-spring:
-  data:
-    mongodb:
-      #      mongodb://<user>:<passwd>@<host>:<port>/<dbname>
-      uri:  mongodb+srv://dharbar:${MONGO_DB_PASS}@musictags-tgemi.gcp.mongodb.net/music?retryWrites=true&w=majority
-
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
+itunes:
+  token:
+    admin:
+      private-key: ${ITUNES_PRIVATE_KEY}
+      api-key-id: ${ITUNES_API_KEY}
+      issuer-id: ${ITUNES_ISSUER_ID}
 
 logging.level.org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG

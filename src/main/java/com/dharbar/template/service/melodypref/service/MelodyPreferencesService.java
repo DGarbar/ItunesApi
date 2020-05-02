@@ -5,6 +5,7 @@ import com.dharbar.template.service.melodypref.repo.MelodyPreferenceRepo;
 import com.dharbar.template.service.melodypref.repo.entity.MelodyPref;
 import lombok.AllArgsConstructor;
 import org.apache.commons.collections.CollectionUtils;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
+@Profile("mongo")
 @AllArgsConstructor
 @Service
 public class MelodyPreferencesService {
