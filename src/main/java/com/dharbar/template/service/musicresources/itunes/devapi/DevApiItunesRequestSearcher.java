@@ -1,14 +1,13 @@
 package com.dharbar.template.service.musicresources.itunes.devapi;
 
 import com.dharbar.template.service.musicresources.itunes.devapi.dto.devapi.ItunesResponse;
-import com.dharbar.template.service.musicresources.itunes.devapi.dto.devapi.ItunesSongsData;
+import com.dharbar.template.service.musicresources.itunes.devapi.dto.devapi.ItunesResult;
 import com.dharbar.template.service.musicresources.itunes.devapi.token.TokenProvider;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.net.URISyntaxException;
@@ -16,33 +15,33 @@ import java.util.List;
 
 @Slf4j
 @Service
-public class DevApiItunesRequester {
+public class DevApiItunesRequestSearcher {
 
     private final TokenProvider tokenProvider;
-    private final URIBuilder searchUriBuilder = new URIBuilder()
-            .setScheme("https")
-            .setHost("api.music.apple.com")
-            .setPath("/v1/catalog/us/search");
 
     private final WebClient.Builder webClientBuilder;
 
-    public DevApiItunesRequester(TokenProvider tokenProvider,
-                                 WebClient.Builder webClientBuilder) {
+    public DevApiItunesRequestSearcher(TokenProvider tokenProvider,
+                                       WebClient.Builder webClientBuilder) {
         this.tokenProvider = tokenProvider;
         this.webClientBuilder = webClientBuilder;
     }
 
-    public Flux<ItunesSongsData> request(List<NameValuePair> params) {
+    public Mono<ItunesResult> request(List<NameValuePair> params) {
         return requestLimited(params);
     }
 
-    public Mono<ItunesSongsData> requestOne(List<NameValuePair> params) {
-        return requestLimited(params).singleOrEmpty();
+    public Mono<ItunesResult> requestOne(List<NameValuePair> params) {
+        return requestLimited(params);
     }
 
-    private Flux<ItunesSongsData> requestLimited(List<NameValuePair> params) {
+    // TODO LIMIT
+    private Mono<ItunesResult> requestLimited(List<NameValuePair> params) {
         try {
-            var searchUrl = searchUriBuilder
+            var searchUrl = new URIBuilder()
+                    .setScheme("https")
+                    .setHost("api.music.apple.com")
+                    .setPath("/v1/catalog/us/search")
 //                    .addParameter("limit", String.valueOf(limit))
                     .addParameters(params)
                     .build();
@@ -50,16 +49,12 @@ public class DevApiItunesRequester {
 
             return webClientBuilder.build().get()
                     .uri(searchUrl)
-                    .header("Authorization", "Bearer " + tokenProvider.provideToken())
+                    .headers(h -> h.setBearerAuth(tokenProvider.provideToken()))
                     .retrieve()
                     .bodyToMono(ItunesResponse.class)
-                    .flatMapMany(this::extractData);
+                    .map(ItunesResponse::getResults);
         } catch (URISyntaxException e) {
-            return Flux.error(e);
+            return Mono.error(e);
         }
-    }
-
-    private Flux<ItunesSongsData> extractData(ItunesResponse itunesResponse) {
-        return Flux.fromIterable(itunesResponse.getResults().getSongs().getData());
     }
 }

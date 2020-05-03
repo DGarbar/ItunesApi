@@ -7,43 +7,28 @@ import org.apache.http.message.BasicNameValuePair;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class DevApiItunesMusicAttributesMapper {
 
-    public List<NameValuePair> mapMusicAttributes(MusicAttributes musicAttributes) {
-        final List<NameValuePair> nameValuePairs = getDefault();
-        prepareTerm(musicAttributes).ifPresent(nameValuePairs::add);
+    private final static BasicNameValuePair SONG_TYPE = new BasicNameValuePair("types", "songs");
+    private final static BasicNameValuePair ARTISTS_TYPE = new BasicNameValuePair("types", "artists");
 
-        return nameValuePairs;
+    // TODO
+    public List<NameValuePair> mapSong(MusicAttributes musicAttributes) {
+//        prepareTerm(musicAttributes).ifPresent(nameValuePairs::add);
+
+        return null;
     }
 
-    private List<NameValuePair> getDefault() {
-        List<NameValuePair> nameValuePairs = new ArrayList<>();
-
-        nameValuePairs.add(new BasicNameValuePair("types", "songs"));
-        return nameValuePairs;
+    public List<NameValuePair> mapSong(String term) {
+        return List.of(SONG_TYPE, new BasicNameValuePair("term", term));
     }
 
-    private List<NameValuePair> getDefault(NameValuePair nameValuePair) {
-        List<NameValuePair> nameValuePairs = getDefault();
-        nameValuePairs.add(nameValuePair);
-        return nameValuePairs;
-    }
-
-    public List<NameValuePair> mapMelody(String artist, String songName) {
-        final String term = StringUtils.trimToEmpty(String.format("%s %s", artist, songName));
-        return StringUtils.isBlank(term)
-                ? Collections.emptyList()
-                : getDefault(new BasicNameValuePair("term", term));
-    }
-
-    public List<NameValuePair> mapArtist(String artist) {
-        return getDefault(new BasicNameValuePair("term", artist));
+    public List<NameValuePair> mapArtist(String term) {
+        return List.of(ARTISTS_TYPE, new BasicNameValuePair("term", term));
     }
 
     private Optional<BasicNameValuePair> prepareTerm(MusicAttributes musicAttributes) {

@@ -1,10 +1,11 @@
 package com.dharbar.template.service.musicresources.itunes.devapi;
 
 import com.dharbar.template.controller.dto.MusicAttributes;
-import com.dharbar.template.service.musicresources.MusicResource;
+import com.dharbar.template.service.musicresources.SongResource;
 import com.dharbar.template.service.musicresources.dto.MusicAsResource;
-import com.dharbar.template.service.musicresources.itunes.devapi.dto.devapi.ItunesSongsAttributesPreview;
-import com.dharbar.template.service.musicresources.itunes.devapi.dto.devapi.ItunesSongsData;
+import com.dharbar.template.service.musicresources.itunes.devapi.dto.devapi.ItunesResult;
+import com.dharbar.template.service.musicresources.itunes.devapi.dto.devapi.songs.ItunesSongsAttributesPreview;
+import com.dharbar.template.service.musicresources.itunes.devapi.dto.devapi.songs.ItunesSongsData;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -14,12 +15,12 @@ import reactor.core.publisher.Mono;
 @Primary
 @Slf4j
 @Service
-public class DevApiItunesResource implements MusicResource {
+public class DevApiItunesResource implements SongResource {
 
-    private final DevApiItunesRequester openApiItunesRequester;
+    private final DevApiItunesRequestSearcher openApiItunesRequester;
     private final DevApiItunesMusicAttributesMapper musicAttributesMapper;
 
-    public DevApiItunesResource(DevApiItunesRequester openApiItunesRequester,
+    public DevApiItunesResource(DevApiItunesRequestSearcher openApiItunesRequester,
                                 DevApiItunesMusicAttributesMapper musicAttributesMapper) {
         this.openApiItunesRequester = openApiItunesRequester;
         this.musicAttributesMapper = musicAttributesMapper;
@@ -27,23 +28,32 @@ public class DevApiItunesResource implements MusicResource {
 
     @Override
     public Flux<MusicAsResource> findByArtist(String artist) {
-        var params = musicAttributesMapper.mapArtist(artist);
+        var params = musicAttributesMapper.mapSong(artist);
         return openApiItunesRequester.request(params)
+                .flatMapMany(this::extractData)
                 .map(this::mapToDto);
     }
 
     @Override
     public Mono<MusicAsResource> findMelody(String artist, String songName) {
-        var params = musicAttributesMapper.mapMelody(artist, songName);
+        var artistAndSong = String.format("%s %s", artist, songName);
+        var params = musicAttributesMapper.mapSong(artistAndSong);
         return openApiItunesRequester.requestOne(params)
+                .flatMapMany(this::extractData)
+                .singleOrEmpty()
                 .map(this::mapToDto);
     }
 
     @Override
     public Flux<MusicAsResource> findByMusicAttributes(MusicAttributes musicAttributes) {
-        var params = musicAttributesMapper.mapMusicAttributes(musicAttributes);
+        var params = musicAttributesMapper.mapSong(musicAttributes);
         return openApiItunesRequester.request(params)
+                .flatMapMany(this::extractData)
                 .map(this::mapToDto);
+    }
+
+    private Flux<ItunesSongsData> extractData(ItunesResult itunesResult) {
+        return Flux.fromIterable(itunesResult.getSongs().getData());
     }
 
     private MusicAsResource mapToDto(ItunesSongsData itunesSongsData) {

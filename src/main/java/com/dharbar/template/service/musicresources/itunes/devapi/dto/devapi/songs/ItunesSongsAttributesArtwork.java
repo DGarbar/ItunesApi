@@ -1,4 +1,4 @@
-package com.dharbar.template.service.musicresources.itunes.devapi.dto.devapi;
+package com.dharbar.template.service.musicresources.itunes.devapi.dto.devapi.songs;
 
 import lombok.Builder;
 import lombok.Value;

@@ -5,7 +5,7 @@ import com.dharbar.template.service.musicresources.dto.MusicAsResource;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-public interface MusicResource {
+public interface SongResource {
 
     Mono<MusicAsResource> findMelody(String artist, String songName);
 
