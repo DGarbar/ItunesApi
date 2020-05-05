@@ -27,8 +27,8 @@ public class DevApiItunesResource implements SongResource {
     }
 
     @Override
-    public Flux<MusicAsResource> findByArtist(String artist) {
-        var params = musicAttributesMapper.mapSong(artist);
+    public Flux<MusicAsResource> findBy(String search) {
+        var params = musicAttributesMapper.mapSong(search);
         return openApiItunesRequester.request(params)
                 .flatMapMany(this::extractData)
                 .map(this::mapToDto);

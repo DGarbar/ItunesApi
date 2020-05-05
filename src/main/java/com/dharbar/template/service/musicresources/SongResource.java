@@ -9,7 +9,7 @@ public interface SongResource {
 
     Mono<MusicAsResource> findMelody(String artist, String songName);
 
-    Flux<MusicAsResource> findByArtist(String artist);
+    Flux<MusicAsResource> findBy(String search);
 
     Flux<MusicAsResource> findByMusicAttributes(MusicAttributes musicAttributes);
 }

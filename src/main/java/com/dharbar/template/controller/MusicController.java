@@ -25,8 +25,8 @@ public class MusicController {
     }
 
     @GetMapping
-    private Flux<MusicAsResource> findBy(@RequestParam String artist) {
-        return songResource.findByArtist(artist);
+    private Flux<MusicAsResource> findBy(@RequestParam String search) {
+        return songResource.findBy(search);
     }
 
 //    @GetMapping("/artists")

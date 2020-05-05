@@ -7,8 +7,6 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
-import java.util.stream.Collectors;
-
 @Primary
 @Slf4j
 @Service
@@ -38,14 +36,12 @@ public class DevApiItunesSearcher implements MusicSearcher {
     }
 
     private Flux<String> extractSongNames(ItunesResult itunesResult) {
-        return Flux.fromIterable(itunesResult.getSongs().getData().stream()
-                .map(itunesArtistsData -> itunesArtistsData.getAttributes().getName())
-                .collect(Collectors.toList()));
+        return Flux.fromStream(itunesResult.getSongs().getData().stream()
+                .map(itunesArtistsData -> itunesArtistsData.getAttributes().getName()));
     }
 
     private Flux<String> extractArtistNames(ItunesResult itunesResult) {
-        return Flux.fromIterable(itunesResult.getArtists().getData().stream()
-                .map(itunesArtistsData -> itunesArtistsData.getAttributes().getName())
-                .collect(Collectors.toList()));
+        return Flux.fromStream(itunesResult.getArtists().getData().stream()
+                .map(itunesArtistsData -> itunesArtistsData.getAttributes().getName()));
     }
 }

@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+import java.util.List;
 
 @AllArgsConstructor
 @RestController
@@ -16,7 +18,8 @@ public class SearchController {
     private final MusicSearcher musicSearcher;
 
     @GetMapping
-    private Flux<String> findByArtist(@RequestParam String artist) {
-             return  musicSearcher.findArtist(artist);
+    private Mono<List<String>> findByArtist(@RequestParam String artist) {
+        return musicSearcher.findArtist(artist).collectList();
     }
 }
+

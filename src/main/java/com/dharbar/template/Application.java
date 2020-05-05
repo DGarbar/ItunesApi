@@ -6,7 +6,6 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 
 @SuppressWarnings("checkstyle:hideutilityclassconstructor")
-//@EnableSwagger2WebFlux
 @SpringBootApplication
 @EnableReactiveMongoRepositories
 @EnableConfigurationProperties
