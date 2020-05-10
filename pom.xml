@@ -119,6 +119,12 @@
             </exclusions>
         </dependency>
 
+        <!-- MonogDB embed -->
+        <dependency>
+            <groupId>de.flapdoodle.embed</groupId>
+            <artifactId>de.flapdoodle.embed.mongo</artifactId>
+            <scope>test</scope>
+        </dependency>
 
         <!-- junit 5 -->
         <dependency>
