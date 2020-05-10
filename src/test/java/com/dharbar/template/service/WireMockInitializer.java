@@ -9,11 +9,9 @@ import org.springframework.context.event.ContextClosedEvent;
 
 public class WireMockInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
-    private static final int WIREMOCK_PORT = 8090;
-
     @Override
     public void initialize(ConfigurableApplicationContext configurableApplicationContext) {
-        WireMockServer wireMockServer = new WireMockServer(new WireMockConfiguration().port(WIREMOCK_PORT));
+        WireMockServer wireMockServer = new WireMockServer(new WireMockConfiguration().dynamicPort());
         wireMockServer.start();
 
         configurableApplicationContext.getBeanFactory().registerSingleton("wireMockServer", wireMockServer);
@@ -25,7 +23,7 @@ public class WireMockInitializer implements ApplicationContextInitializer<Config
         });
 
         TestPropertyValues
-                .of("itunes.dev.host=localhost:" + WIREMOCK_PORT)
+                .of("itunes.dev.host=localhost:" + wireMockServer.port())
                 .applyTo(configurableApplicationContext);
     }
 }
