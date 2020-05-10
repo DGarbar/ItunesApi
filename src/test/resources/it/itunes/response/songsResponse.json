@@ -1,0 +1,100 @@
+{
+  "results": {
+    "songs": {
+      "href": "/v1/catalog/us/search?limit=2&term=james+brown&types=songs",
+      "next": "/v1/catalog/us/search?offset=2&term=james+brown&types=songs",
+      "data": [
+        {
+          "id": "1440814787",
+          "type": "songs",
+          "href": "/v1/catalog/us/songs/1440814787",
+          "attributes": {
+            "previews": [
+              {
+                "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/cb/9b/9d/cb9b9d58-1c71-4460-2b1a-ca19363b956e/mzaf_2888228827270953317.plus.aac.p.m4a"
+              }
+            ],
+            "artwork": {
+              "width": 3600,
+              "height": 3600,
+              "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/d3/74/ba/d374ba85-5559-7a70-4392-0495403700c8/00602547021700.rgb.jpg/{w}x{h}bb.jpeg",
+              "bgColor": "dab668",
+              "textColor1": "090604",
+              "textColor2": "31241e",
+              "textColor3": "322918",
+              "textColor4": "53412d"
+            },
+            "artistName": "James Brown",
+            "url": "https://music.apple.com/us/album/the-payback/1440814785?i=1440814787",
+            "discNumber": 1,
+            "genreNames": [
+              "Soul",
+              "Music",
+              "R&B/Soul"
+            ],
+            "durationInMillis": 459573,
+            "releaseDate": "1973-12-01",
+            "name": "The Payback",
+            "isrc": "USF067400050",
+            "hasLyrics": true,
+            "albumName": "The Payback",
+            "playParams": {
+              "id": "1440814787",
+              "kind": "song"
+            },
+            "trackNumber": 1,
+            "composerName": "James Brown, Fred Wesley & John Starks"
+          }
+        },
+        {
+          "id": "1469584352",
+          "type": "songs",
+          "href": "/v1/catalog/us/songs/1469584352",
+          "attributes": {
+            "previews": [
+              {
+                "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/d7/e0/41/d7e041e8-c352-6994-6916-5fc345077da0/mzaf_12369990792051770545.plus.aac.p.m4a"
+              }
+            ],
+            "artwork": {
+              "width": 1500,
+              "height": 1500,
+              "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/d4/f9/4b/d4f94b57-d435-48bf-e29a-ef0b35994267/14UMGIM28794.rgb.jpg/{w}x{h}bb.jpeg",
+              "bgColor": "ffffff",
+              "textColor1": "0f0d0d",
+              "textColor2": "323332",
+              "textColor3": "3f3d3e",
+              "textColor4": "5b5c5b"
+            },
+            "artistName": "James Brown",
+            "url": "https://music.apple.com/us/album/try-me-single-version-mono/1469584155?i=1469584352",
+            "discNumber": 1,
+            "genreNames": [
+              "R&B/Soul",
+              "Music"
+            ],
+            "durationInMillis": 152657,
+            "releaseDate": "1958-10-01",
+            "name": "Try Me (Single Version) [Mono]",
+            "isrc": "USPG19190036",
+            "hasLyrics": true,
+            "albumName": "20 All-Time Greatest Hits!",
+            "playParams": {
+              "id": "1469584352",
+              "kind": "song"
+            },
+            "trackNumber": 10,
+            "composerName": "James Brown"
+          }
+        }
+      ]
+    }
+  },
+  "meta": {
+    "results": {
+      "order": [
+        "songs"
+      ]
+    }
+  }
+}

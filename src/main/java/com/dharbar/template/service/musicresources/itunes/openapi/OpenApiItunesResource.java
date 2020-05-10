@@ -1,6 +1,5 @@
 package com.dharbar.template.service.musicresources.itunes.openapi;
 
-import com.dharbar.template.controller.dto.MusicAttributes;
 import com.dharbar.template.service.musicresources.SongResource;
 import com.dharbar.template.service.musicresources.dto.MusicAsResource;
 import com.dharbar.template.service.musicresources.itunes.openapi.dto.openapi.ItunesResult;
@@ -39,13 +38,13 @@ public class OpenApiItunesResource implements SongResource {
         return openApiItunesRequester.requestOne(params)
                 .map(this::mapToDto);
     }
-
-    @Override
-    public Flux<MusicAsResource> findByMusicAttributes(MusicAttributes musicAttributes) {
-        final List<NameValuePair> params = musicAttributesMapper.mapMusicAttributes(musicAttributes);
-        return openApiItunesRequester.request(params)
-                .map(this::mapToDto);
-    }
+//
+//    @Override
+//    public Flux<MusicAsResource> findByMusicAttributes(MusicAttributes musicAttributes) {
+//        final List<NameValuePair> params = musicAttributesMapper.mapMusicAttributes(musicAttributes);
+//        return openApiItunesRequester.request(params)
+//                .map(this::mapToDto);
+//    }
 
     private MusicAsResource mapToDto(ItunesResult itunesResult) {
         return MusicAsResource.builder()

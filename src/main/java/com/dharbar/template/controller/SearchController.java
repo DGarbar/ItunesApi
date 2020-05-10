@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 @AllArgsConstructor
@@ -18,7 +19,7 @@ public class SearchController {
     private final MusicSearcher musicSearcher;
 
     @GetMapping
-    private Mono<List<String>> findByArtist(@RequestParam String artist) {
+    private Mono<List<String>> findByArtist(@NotBlank @RequestParam String artist) {
         return musicSearcher.findArtist(artist).collectList();
     }
 }

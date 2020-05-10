@@ -16,16 +16,12 @@ public class LocalUserRepository implements UserRepository {
 
     public LocalUserRepository() {
         this.idToUserEntity = new HashMap<>();
-        UserEntity testEntity = UserEntity.builder()
-                .id(1)
-                .username("test")
-                .itunesUrl("http://test")
-                .build();
+        UserEntity testEntity = UserEntity.of(1, "test", "http://test");
         idToUserEntity.put(1, testEntity);
     }
 
     public Mono<UserEntity> getById(Integer id) {
-        return Mono.just(idToUserEntity.get(id));
+        return Mono.justOrEmpty(idToUserEntity.get(id));
     }
 
     public Mono<UserEntity> save(UserEntity userEntity) {

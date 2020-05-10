@@ -1,14 +1,10 @@
 package com.dharbar.template.service.musicresources.itunes.devapi;
 
-import com.dharbar.template.controller.dto.MusicAttributes;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class DevApiItunesMusicAttributesMapper {
@@ -16,12 +12,12 @@ public class DevApiItunesMusicAttributesMapper {
     private final static BasicNameValuePair SONG_TYPE = new BasicNameValuePair("types", "songs");
     private final static BasicNameValuePair ARTISTS_TYPE = new BasicNameValuePair("types", "artists");
 
-    // TODO
-    public List<NameValuePair> mapSong(MusicAttributes musicAttributes) {
+//    // TODO
+//    public List<NameValuePair> mapSong(MusicAttributes musicAttributes) {
 //        prepareTerm(musicAttributes).ifPresent(nameValuePairs::add);
-
-        return null;
-    }
+//
+//        return null;
+//    }
 
     public List<NameValuePair> mapSong(String term) {
         return List.of(SONG_TYPE, new BasicNameValuePair("term", term));
@@ -31,19 +27,20 @@ public class DevApiItunesMusicAttributesMapper {
         return List.of(ARTISTS_TYPE, new BasicNameValuePair("term", term));
     }
 
-    private Optional<BasicNameValuePair> prepareTerm(MusicAttributes musicAttributes) {
-        var artists = musicAttributes.getArtists();
-        if (CollectionUtils.isEmpty(artists)) {
-            return Optional.empty();
-        }
-
-        // TODO parse multiple and create req
-        return artists.stream()
-                .map(StringUtils::trimToEmpty)
-                .filter(StringUtils::isNotBlank)
-                .map(artist -> new BasicNameValuePair("term", artist))
-                .findFirst();
-    }
+//DevApiItunesRequestSearcher
+//    private Optional<BasicNameValuePair> prepareTerm(MusicAttributes musicAttributes) {
+//        var artists = musicAttributes.getArtists();
+//        if (CollectionUtils.isEmpty(artists)) {
+//            return Optional.empty();
+//        }
+//
+//        // TODO parse multiple and create req
+//        return artists.stream()
+//                .map(StringUtils::trimToEmpty)
+//                .filter(StringUtils::isNotBlank)
+//                .map(artist -> new BasicNameValuePair("term", artist))
+//                .findFirst();
+//    }
 
     // TODO Attribute
 }

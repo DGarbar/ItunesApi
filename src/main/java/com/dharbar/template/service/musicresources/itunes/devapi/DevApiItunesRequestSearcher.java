@@ -3,9 +3,12 @@ package com.dharbar.template.service.musicresources.itunes.devapi;
 import com.dharbar.template.service.musicresources.itunes.devapi.dto.devapi.ItunesResponse;
 import com.dharbar.template.service.musicresources.itunes.devapi.dto.devapi.ItunesResult;
 import com.dharbar.template.service.musicresources.itunes.devapi.token.TokenProvider;
+import com.dharbar.template.service.musicresources.itunes.devapi.token.exception.NoTokenException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
@@ -18,8 +21,13 @@ import java.util.List;
 public class DevApiItunesRequestSearcher {
 
     private final TokenProvider tokenProvider;
-
     private final WebClient.Builder webClientBuilder;
+    @Value("${itunes.dev.scheme}")
+    private String itunesScheme;
+    @Value("${itunes.dev.host}")
+    private String itunesHost;
+    @Value("${itunes.dev.path}")
+    private String itunesPathSearch;
 
     public DevApiItunesRequestSearcher(TokenProvider tokenProvider,
                                        WebClient.Builder webClientBuilder) {
@@ -31,29 +39,35 @@ public class DevApiItunesRequestSearcher {
         return requestLimited(params);
     }
 
-    public Mono<ItunesResult> requestOne(List<NameValuePair> params) {
-        return requestLimited(params);
-    }
+//    public Mono<ItunesResult> requestOne(List<NameValuePair> params) {
+//        return requestLimited(params);
+//    }
 
+    // TODO TEST artist - song
     // TODO LIMIT
     private Mono<ItunesResult> requestLimited(List<NameValuePair> params) {
         try {
             var searchUrl = new URIBuilder()
-                    .setScheme("https")
-                    .setHost("api.music.apple.com")
-                    .setPath("/v1/catalog/us/search")
+                    .setScheme(itunesScheme)
+                    .setHost(itunesHost)
+                    .setPath(itunesPathSearch)
 //                    .addParameter("limit", String.valueOf(limit))
                     .addParameters(params)
                     .build();
-            log.info("sending to Itunes uri {}", searchUrl.toString());
+            log.info("Sending to Itunes uri {}", searchUrl.toString());
+            String token = tokenProvider.provideToken();
 
             return webClientBuilder.build().get()
                     .uri(searchUrl)
-                    .headers(h -> h.setBearerAuth(tokenProvider.provideToken()))
+                    .headers(h -> h.setBearerAuth(token))
                     .retrieve()
+                    .onStatus(HttpStatus::isError, clientResponse -> Mono.error(
+                            new IllegalArgumentException("Server responded with badRequest")))
                     .bodyToMono(ItunesResponse.class)
                     .map(ItunesResponse::getResults);
         } catch (URISyntaxException e) {
+            return Mono.error(() -> new InternalError(e));
+        } catch (NoTokenException e) {
             return Mono.error(e);
         }
     }

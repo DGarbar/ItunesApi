@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
+import javax.validation.constraints.Min;
+
 @AllArgsConstructor
 @RestController
 @RequestMapping("/users")
@@ -17,7 +19,7 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/{userId}")
-    private Mono<User> getByUserId(@PathVariable Integer userId) {
+    private Mono<User> getByUserId(@Min(1) @PathVariable Integer userId) {
         return userService.getById(userId);
     }
 }

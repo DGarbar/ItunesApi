@@ -2,6 +2,7 @@ package com.dharbar.template.service.userService;
 
 import com.dharbar.template.service.userService.dto.User;
 import com.dharbar.template.service.userService.repo.UserRepository;
+import com.dharbar.template.service.userService.repo.exception.UserNotFoundException;
 import com.dharbar.template.service.userService.repo.model.UserEntity;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,7 @@ public class UserService {
     public Mono<User> getById(Integer id) {
         return userRepository.getById(id)
                 .map(this::toDto)
-                .switchIfEmpty(Mono.error(() -> new IllegalArgumentException("User not found")));
+                .switchIfEmpty(Mono.error(() -> new UserNotFoundException("User not found")));
     }
 
     public Mono<User> save(User user) {
@@ -27,18 +28,12 @@ public class UserService {
                 .map(this::toDto);
     }
 
-    private User toDto(UserEntity userEntity){
-        return User.builder()
-                .username(userEntity.getUsername())
-                .itunesUrl(userEntity.getItunesUrl())
-                .build();
+    private User toDto(UserEntity userEntity) {
+        return User.of(userEntity.getUsername(), userEntity.getItunesUrl());
     }
 
-    private UserEntity toEntity(User user){
-        return UserEntity.builder()
-                .id(ThreadLocalRandom.current().nextInt())
-                .username(user.getUsername())
-                .itunesUrl(user.getItunesUrl())
-                .build();
+    private UserEntity toEntity(User user) {
+        int id = ThreadLocalRandom.current().nextInt();
+        return UserEntity.of(id, user.getUsername(), user.getItunesUrl());
     }
 }

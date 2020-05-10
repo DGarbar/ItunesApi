@@ -1,10 +1,8 @@
 package com.dharbar.template.service.userService.repo.model;
 
-import lombok.Builder;
 import lombok.Value;
 
-@Builder(toBuilder = true)
-@Value
+@Value(staticConstructor = "of")
 public class UserEntity {
 
     Integer id;

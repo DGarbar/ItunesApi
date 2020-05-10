@@ -1,6 +1,7 @@
 package com.dharbar.template.service.musicresources.itunes.devapi.token;
 
-import com.dharbar.template.service.musicresources.itunes.devapi.token.generator.SimpleTokenGenerator;
+import com.dharbar.template.service.musicresources.itunes.devapi.token.exception.NoTokenException;
+import com.dharbar.template.service.musicresources.itunes.devapi.token.generator.TokenGenerator;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -13,10 +14,10 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class TokenProvider {
 
-    private final SimpleTokenGenerator tokenGenerator;
+    private final TokenGenerator tokenGenerator;
     private final Map<String, String> tokenCache;
 
-    public TokenProvider(SimpleTokenGenerator tokenGenerator) {
+    public TokenProvider(TokenGenerator tokenGenerator) {
         this.tokenGenerator = tokenGenerator;
         tokenCache = Caffeine.newBuilder()
                 .expireAfterWrite(15, TimeUnit.MINUTES)
@@ -24,7 +25,7 @@ public class TokenProvider {
                 .<String, String>build().asMap();
     }
 
-    public String provideToken() {
+    public String provideToken() throws NoTokenException {
         String token = tokenCache.get("ADMIN");
         if (StringUtils.isBlank(token)) {
             String generateToken = generateToken();
@@ -36,10 +37,8 @@ public class TokenProvider {
         return token;
     }
 
-    private String generateToken() {
+    private String generateToken() throws NoTokenException {
         return tokenGenerator.getToken()
-                .orElseThrow(() -> new IllegalArgumentException("Token was not provided"));
+                .orElseThrow(() -> new NoTokenException("Token was not provided"));
     }
-
-
 }

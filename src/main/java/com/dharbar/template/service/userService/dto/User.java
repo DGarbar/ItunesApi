@@ -1,13 +1,11 @@
 package com.dharbar.template.service.userService.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Builder;
 import lombok.Value;
 
 import javax.validation.constraints.NotNull;
 
-@Builder(toBuilder = true)
-@Value
+@Value(staticConstructor = "of")
 public class User {
 
     @NotNull

@@ -11,6 +11,10 @@ management:
         include: "*"
 
 itunes:
+  dev:
+    host: api.music.apple.com
+    scheme: https
+    path: /v1/catalog/us/search
   token:
     admin:
       private-key: ${ITUNES_PRIVATE_KEY}

@@ -1,0 +1,319 @@
+{
+  "results": {
+    "songs": {
+      "href": "/v1/catalog/us/search?limit=2&term=james+brown&types=songs",
+      "next": "/v1/catalog/us/search?offset=2&term=james+brown&types=songs",
+      "data": [
+        {
+          "id": "1440814787",
+          "type": "songs",
+          "href": "/v1/catalog/us/songs/1440814787",
+          "attributes": {
+            "previews": [
+              {
+                "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/cb/9b/9d/cb9b9d58-1c71-4460-2b1a-ca19363b956e/mzaf_2888228827270953317.plus.aac.p.m4a"
+              }
+            ],
+            "artwork": {
+              "width": 3600,
+              "height": 3600,
+              "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/d3/74/ba/d374ba85-5559-7a70-4392-0495403700c8/00602547021700.rgb.jpg/{w}x{h}bb.jpeg",
+              "bgColor": "dab668",
+              "textColor1": "090604",
+              "textColor2": "31241e",
+              "textColor3": "322918",
+              "textColor4": "53412d"
+            },
+            "artistName": "James Brown",
+            "url": "https://music.apple.com/us/album/the-payback/1440814785?i=1440814787",
+            "discNumber": 1,
+            "genreNames": [
+              "Soul",
+              "Music",
+              "R&B/Soul"
+            ],
+            "durationInMillis": 459573,
+            "releaseDate": "1973-12-01",
+            "name": "The Payback",
+            "isrc": "USF067400050",
+            "hasLyrics": true,
+            "albumName": "The Payback",
+            "playParams": {
+              "id": "1440814787",
+              "kind": "song"
+            },
+            "trackNumber": 1,
+            "composerName": "James Brown, Fred Wesley & John Starks"
+          }
+        },
+        {
+          "id": "1469584352",
+          "type": "songs",
+          "href": "/v1/catalog/us/songs/1469584352",
+          "attributes": {
+            "previews": [
+              {
+                "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/d7/e0/41/d7e041e8-c352-6994-6916-5fc345077da0/mzaf_12369990792051770545.plus.aac.p.m4a"
+              }
+            ],
+            "artwork": {
+              "width": 1500,
+              "height": 1500,
+              "url": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/d4/f9/4b/d4f94b57-d435-48bf-e29a-ef0b35994267/14UMGIM28794.rgb.jpg/{w}x{h}bb.jpeg",
+              "bgColor": "ffffff",
+              "textColor1": "0f0d0d",
+              "textColor2": "323332",
+              "textColor3": "3f3d3e",
+              "textColor4": "5b5c5b"
+            },
+            "artistName": "James Brown",
+            "url": "https://music.apple.com/us/album/try-me-single-version-mono/1469584155?i=1469584352",
+            "discNumber": 1,
+            "genreNames": [
+              "R&B/Soul",
+              "Music"
+            ],
+            "durationInMillis": 152657,
+            "releaseDate": "1958-10-01",
+            "name": "Try Me (Single Version) [Mono]",
+            "isrc": "USPG19190036",
+            "hasLyrics": true,
+            "albumName": "20 All-Time Greatest Hits!",
+            "playParams": {
+              "id": "1469584352",
+              "kind": "song"
+            },
+            "trackNumber": 10,
+            "composerName": "James Brown"
+          }
+        }
+      ]
+    },
+    "artists": {
+      "href": "/v1/catalog/us/search?limit=2&term=james+brown&types=artists",
+      "next": "/v1/catalog/us/search?offset=2&term=james+brown&types=artists",
+      "data": [
+        {
+          "id": "117118",
+          "type": "artists",
+          "href": "/v1/catalog/us/artists/117118",
+          "attributes": {
+            "url": "https://music.apple.com/us/artist/james-brown/117118",
+            "editorialNotes": {
+              "standard": "The Godfather of Soul, The Hardest Working Man in Show Business, Soul Brother Number One . . . Mountain-of-a-man nicknames, no doubt, but not one of them ever did James Brown the justice he deserved. JB’s influence is so large it’s plain impossible to imagine what music today would sound like without him. James didn’t just master soul and funk; he invented them. From the on-bended-knee plea called “Try Me” straight to ground zero of the hip-hop revolution, where his screams, grunts, and funky drummer backboned every cut worth mentioning, Brown was soul power itself, an inspiration to an entire nation. Now that Mr. Dynamite has taken his last sweat-drenched shuffle offstage, we’re all left like an awe-struck Apollo audience — still screaming for just one more encore while trying to take in the force of nature we were blessed to witness. James Brown’s face should be on money. His likeness carved on a mountain. And, most importantly, his music played forever."
+            },
+            "name": "James Brown",
+            "genreNames": [
+              "R&B/Soul"
+            ]
+          },
+          "relationships": {
+            "albums": {
+              "href": "/v1/catalog/us/artists/117118/albums",
+              "next": "/v1/catalog/us/artists/117118/albums?offset=25",
+              "data": [
+                {
+                  "id": "1469584155",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1469584155"
+                },
+                {
+                  "id": "1444490033",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1444490033"
+                },
+                {
+                  "id": "1440814785",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1440814785"
+                },
+                {
+                  "id": "1469580639",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1469580639"
+                },
+                {
+                  "id": "1444193522",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1444193522"
+                },
+                {
+                  "id": "1444486609",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1444486609"
+                },
+                {
+                  "id": "1469582098",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1469582098"
+                },
+                {
+                  "id": "1434916118",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1434916118"
+                },
+                {
+                  "id": "1442942755",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1442942755"
+                },
+                {
+                  "id": "1445669062",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1445669062"
+                },
+                {
+                  "id": "1469577132",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1469577132"
+                },
+                {
+                  "id": "1443909086",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1443909086"
+                },
+                {
+                  "id": "1443620023",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1443620023"
+                },
+                {
+                  "id": "1447536303",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1447536303"
+                },
+                {
+                  "id": "1423294588",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1423294588"
+                },
+                {
+                  "id": "1445099501",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1445099501"
+                },
+                {
+                  "id": "1443828151",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1443828151"
+                },
+                {
+                  "id": "1442983352",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1442983352"
+                },
+                {
+                  "id": "1469585947",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1469585947"
+                },
+                {
+                  "id": "1444114564",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1444114564"
+                },
+                {
+                  "id": "1476319939",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1476319939"
+                },
+                {
+                  "id": "1061802592",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1061802592"
+                },
+                {
+                  "id": "1445099461",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1445099461"
+                },
+                {
+                  "id": "1469581275",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1469581275"
+                },
+                {
+                  "id": "1426970033",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1426970033"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "745937077",
+          "type": "artists",
+          "href": "/v1/catalog/us/artists/745937077",
+          "attributes": {
+            "url": "https://music.apple.com/us/artist/james-brown-the-famous-flames/745937077",
+            "name": "James Brown & The Famous Flames",
+            "genreNames": [
+              "R&B/Soul"
+            ]
+          },
+          "relationships": {
+            "albums": {
+              "href": "/v1/catalog/us/artists/745937077/albums",
+              "data": [
+                {
+                  "id": "1443835290",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1443835290"
+                },
+                {
+                  "id": "1443072256",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1443072256"
+                },
+                {
+                  "id": "1444029469",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1444029469"
+                },
+                {
+                  "id": "1443888177",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1443888177"
+                },
+                {
+                  "id": "1444039014",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1444039014"
+                },
+                {
+                  "id": "1463251663",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1463251663"
+                },
+                {
+                  "id": "1426962742",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1426962742"
+                },
+                {
+                  "id": "1444039876",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1444039876"
+                },
+                {
+                  "id": "1443419117",
+                  "type": "albums",
+                  "href": "/v1/catalog/us/albums/1443419117"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "meta": {
+    "results": {
+      "order": [
+        "songs",
+        "artists"
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "artist": "James Brown",
+    "songName": "The Payback",
+    "fileUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/cb/9b/9d/cb9b9d58-1c71-4460-2b1a-ca19363b956e/mzaf_2888228827270953317.plus.aac.p.m4a",
+    "trackTimeMillis": 459573,
+    "genres": [
+      "Soul",
+      "Music",
+      "R&B/Soul"
+    ]
+  },
+  {
+    "artist": "James Brown",
+    "songName": "Try Me (Single Version) [Mono]",
+    "fileUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/d7/e0/41/d7e041e8-c352-6994-6916-5fc345077da0/mzaf_12369990792051770545.plus.aac.p.m4a",
+    "trackTimeMillis": 152657,
+    "genres": [
+      "R&B/Soul",
+      "Music"
+    ]
+  }
+]

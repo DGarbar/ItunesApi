@@ -3,6 +3,8 @@ package com.dharbar.template.service.musicresources.itunes.devapi;
 import com.dharbar.template.service.musicresources.MusicSearcher;
 import com.dharbar.template.service.musicresources.itunes.devapi.dto.devapi.ItunesResult;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -12,12 +14,12 @@ import reactor.core.publisher.Flux;
 @Service
 public class DevApiItunesSearcher implements MusicSearcher {
 
-    private final DevApiItunesRequestSearcher openApiItunesRequester;
+    private final DevApiItunesRequestSearcher devApiItunesRequester;
     private final DevApiItunesMusicAttributesMapper musicAttributesMapper;
 
-    public DevApiItunesSearcher(DevApiItunesRequestSearcher openApiItunesRequester,
+    public DevApiItunesSearcher(DevApiItunesRequestSearcher devApiItunesRequester,
                                 DevApiItunesMusicAttributesMapper musicAttributesMapper) {
-        this.openApiItunesRequester = openApiItunesRequester;
+        this.devApiItunesRequester = devApiItunesRequester;
         this.musicAttributesMapper = musicAttributesMapper;
     }
 //
@@ -30,8 +32,12 @@ public class DevApiItunesSearcher implements MusicSearcher {
 
     @Override
     public Flux<String> findArtist(String artist) {
+        if (StringUtils.isBlank(artist)) {
+            return Flux.error(() -> new IllegalArgumentException("Artist param is blank"));
+        }
+
         var params = musicAttributesMapper.mapArtist(artist);
-        return openApiItunesRequester.request(params)
+        return devApiItunesRequester.request(params)
                 .flatMapMany(this::extractArtistNames);
     }
 
@@ -41,7 +47,13 @@ public class DevApiItunesSearcher implements MusicSearcher {
     }
 
     private Flux<String> extractArtistNames(ItunesResult itunesResult) {
-        return Flux.fromStream(itunesResult.getArtists().getData().stream()
-                .map(itunesArtistsData -> itunesArtistsData.getAttributes().getName()));
+        var itunesArtists = itunesResult == null ? null : itunesResult.getArtists();
+        var itunesArtistsData = itunesArtists == null ? null : itunesArtists.getData();
+        if (CollectionUtils.isEmpty(itunesArtistsData)) {
+            return Flux.empty();
+        }
+
+        return Flux.fromStream(itunesArtistsData.stream()
+                .map(itunesArtistData -> itunesArtistData.getAttributes().getName()));
     }
 }
