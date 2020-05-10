@@ -2,8 +2,8 @@ package com.dharbar.template.service.userService;
 
 import com.dharbar.template.service.userService.dto.User;
 import com.dharbar.template.service.userService.repo.UserRepository;
+import com.dharbar.template.service.userService.repo.entity.UserEntity;
 import com.dharbar.template.service.userService.repo.exception.UserNotFoundException;
-import com.dharbar.template.service.userService.repo.model.UserEntity;
 import com.dharbar.template.utils.ShouldWhenUnderscoreNameGenerator;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.Test;

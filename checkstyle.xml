@@ -108,7 +108,7 @@
         <module name="SimplifyBooleanReturn"/>
         <module name="HideUtilityClassConstructor"/>
         <module name="ArrayTypeStyle"/>
-        <module name="CommentsIndentation"/>
+<!--        <module name="CommentsIndentation"/>-->
         <module name="UpperEll"/>
         <module name="IllegalThrows"/>
         <module name="OneStatementPerLine"/>
@@ -141,6 +141,14 @@
     </module>
     <module name="SuppressionSingleFilter">
         <property name="checks" value="FileLength"/>
+        <property name="files" value=".*Test\.java"/>
+    </module>
+    <module name="SuppressionSingleFilter">
+        <property name="checks" value="MethodName"/>
+        <property name="files" value=".*Test\.java"/>
+    </module>
+    <module name="SuppressionSingleFilter">
+        <property name="checks" value="HideUtilityClassConstructor"/>
         <property name="files" value=".*Test\.java"/>
     </module>
 </module>

@@ -34,7 +34,7 @@ class MelodyPreferencesServiceTest {
 
     // Or recreate MongoBy annotation
     @AfterEach
-    void clean(){
+    void clean() {
         mongoTemplate.getDb().drop();
     }
 

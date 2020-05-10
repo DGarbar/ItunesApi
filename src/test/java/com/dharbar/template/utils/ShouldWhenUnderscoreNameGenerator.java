@@ -8,8 +8,8 @@ public class ShouldWhenUnderscoreNameGenerator extends DisplayNameGenerator.Stan
 
     @Override
     public String generateDisplayNameForMethod(Class<?> testClass, Method testMethod) {
-        return this.replaceCamelCase(testMethod.getName()) +
-                DisplayNameGenerator.parameterTypesAsString(testMethod);
+        return this.replaceCamelCase(testMethod.getName())
+                + DisplayNameGenerator.parameterTypesAsString(testMethod);
     }
 
     private String replaceCamelCase(String methodName) {

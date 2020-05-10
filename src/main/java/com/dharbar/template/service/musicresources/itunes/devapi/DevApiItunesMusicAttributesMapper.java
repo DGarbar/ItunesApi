@@ -9,8 +9,8 @@ import java.util.List;
 @Service
 public class DevApiItunesMusicAttributesMapper {
 
-    private final static BasicNameValuePair SONG_TYPE = new BasicNameValuePair("types", "songs");
-    private final static BasicNameValuePair ARTISTS_TYPE = new BasicNameValuePair("types", "artists");
+    private static final BasicNameValuePair SONG_TYPE = new BasicNameValuePair("types", "songs");
+    private static final BasicNameValuePair ARTISTS_TYPE = new BasicNameValuePair("types", "artists");
 
 //    // TODO
 //    public List<NameValuePair> mapSong(MusicAttributes musicAttributes) {

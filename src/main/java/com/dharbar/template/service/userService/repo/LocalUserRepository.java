@@ -1,6 +1,6 @@
 package com.dharbar.template.service.userService.repo;
 
-import com.dharbar.template.service.userService.repo.model.UserEntity;
+import com.dharbar.template.service.userService.repo.entity.UserEntity;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Mono;

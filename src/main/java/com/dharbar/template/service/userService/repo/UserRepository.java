@@ -1,6 +1,6 @@
 package com.dharbar.template.service.userService.repo;
 
-import com.dharbar.template.service.userService.repo.model.UserEntity;
+import com.dharbar.template.service.userService.repo.entity.UserEntity;
 import reactor.core.publisher.Mono;
 
 public interface UserRepository {

@@ -32,7 +32,6 @@ import static org.mockito.BDDMockito.given;
 // TODO Make this immutable
 // WireMock will consume it's own service resources
 //@Import(DevApiItunesRequestSearcherTest.MyTestConfiguration.class)
-
 @ActiveProfiles("local")
 class DevApiItunesRequestSearcherITest extends IntegrationTest {
 
@@ -85,7 +84,6 @@ class DevApiItunesRequestSearcherITest extends IntegrationTest {
         StepVerifier.create(target.request(List.of()))
                 .verifyError(IllegalArgumentException.class);
     }
-
 
     @Test
     void request_emptyResult_emptyBody() {
@@ -193,21 +191,4 @@ class DevApiItunesRequestSearcherITest extends IntegrationTest {
                         }))
                 .verifyComplete();
     }
-
-//        webTestClient.post().uri("/api/repos")
-//                .contentType(MediaType.APPLICATION_JSON_UTF8)
-//                .accept(MediaType.APPLICATION_JSON_UTF8)
-//                .body(Mono.just(repoRequest), RepoRequest.class)
-//                .exchange()
-//                .expectStatus().isOk()
-//                .expectHeader().contentType(MediaType.APPLICATION_JSON_UTF8)
-//                .expectBody()
-//                .jsonPath("$.name").isNotEmpty()
-//                .jsonPath("$.name").isEqualTo("test-webclient-repository");
-//    }
-//
-
-//            MockWebServer
-
-
 }

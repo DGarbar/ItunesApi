@@ -1,6 +1,6 @@
 package com.dharbar.template.service.userService.repo;
 
-import com.dharbar.template.service.userService.repo.model.UserEntity;
+import com.dharbar.template.service.userService.repo.entity.UserEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import reactor.test.StepVerifier;

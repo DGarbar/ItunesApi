@@ -1,4 +1,4 @@
-package com.dharbar.template.service.userService.repo.model;
+package com.dharbar.template.service.userService.repo.entity;
 
 import lombok.Value;
 
