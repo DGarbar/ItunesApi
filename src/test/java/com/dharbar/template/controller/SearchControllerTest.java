@@ -38,5 +38,4 @@ class SearchControllerTest extends IntegrationTest {
                 .expectStatus().is5xxServerError()
                 .expectBody();
     }
-
 }
