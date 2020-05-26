@@ -1,7 +1,6 @@
 [
   {
     "artist": "303 Каратиста",
-    "genre": "",
     "songName": "Опиум",
     "tags": [
       "think",
@@ -11,7 +10,6 @@
   },
   {
     "artist": "Aaron Smith",
-    "genre": "",
     "songName": "Dancin",
     "tags": [
       "swing"
@@ -19,7 +17,6 @@
   },
   {
     "artist": "Aerosmith",
-    "genre": "",
     "songName": "Dream On",
     "tags": [
       "think"
@@ -27,7 +24,6 @@
   },
   {
     "artist": "Aine Cahill",
-    "genre": "",
     "songName": "Beauty Is A Lie",
     "tags": [
       "think"
@@ -35,7 +31,6 @@
   },
   {
     "artist": "Alex Clare",
-    "genre": "",
     "songName": "Damn Your Eyes",
     "tags": [
       "think"
@@ -43,7 +38,6 @@
   },
   {
     "artist": "Alice Merton",
-    "genre": "",
     "songName": "No Roots",
     "tags": [
       "think",
@@ -52,7 +46,6 @@
   },
   {
     "artist": "Alt J",
-    "genre": "",
     "songName": "Bloodflood",
     "tags": [
       "think"
@@ -60,7 +53,6 @@
   },
   {
     "artist": "Ane Brun",
-    "genre": "",
     "songName": "Big In Japan",
     "tags": [
       "think",
@@ -69,14 +61,12 @@
   },
   {
     "artist": "Ariana Grande",
-    "genre": "",
     "songName": "7 Rings",
     "tags": [
     ]
   },
   {
     "artist": "Asking Alexandria",
-    "genre": "",
     "songName": "Alone In A Room",
     "tags": [
       "fun",
@@ -85,7 +75,6 @@
   },
   {
     "artist": "Bazzi",
-    "genre": "",
     "songName": "Beautiful",
     "tags": [
       "think"
@@ -93,7 +82,6 @@
   },
   {
     "artist": "Beethoven",
-    "genre": "",
     "songName": "Лунная Соната",
     "tags": [
       "think",
@@ -103,7 +91,6 @@
   },
   {
     "artist": "Billie Eilish",
-    "genre": "",
     "songName": "Come Out And Play",
     "tags": [
       "think",
@@ -112,7 +99,6 @@
   },
   {
     "artist": "Billie Eilish",
-    "genre": "",
     "songName": "Bad Guy",
     "tags": [
       "move"
@@ -120,7 +106,6 @@
   },
   {
     "artist": "Black Lab",
-    "genre": "",
     "songName": "Burn Out",
     "tags": [
       "think",
@@ -129,7 +114,6 @@
   },
   {
     "artist": "Blonde Redhead",
-    "genre": "",
     "songName": "For The Damaged",
     "tags": [
       "think",
@@ -139,7 +123,6 @@
   },
   {
     "artist": "Bob Moses",
-    "genre": "",
     "songName": "Enough To Believe",
     "tags": [
       "think",
@@ -148,7 +131,6 @@
   },
   {
     "artist": "Boogrov",
-    "genre": "",
     "songName": "I Miss The Colors",
     "tags": [
       "think"
@@ -156,7 +138,6 @@
   },
   {
     "artist": "Boston Manor",
-    "genre": "",
     "songName": "Bad Machine",
     "tags": [
       "fun",
@@ -166,7 +147,6 @@
   },
   {
     "artist": "Bring Me The Horizon",
-    "genre": "",
     "songName": "Run",
     "tags": [
       "fun"
@@ -174,7 +154,6 @@
   },
   {
     "artist": "Bring Me The Horizon",
-    "genre": "",
     "songName": "Doomed",
     "tags": [
       "fun"
@@ -182,7 +161,6 @@
   },
   {
     "artist": "Caravan Palace",
-    "genre": "",
     "songName": "Lone Digger",
     "tags": [
       "swing"
@@ -190,7 +168,6 @@
   },
   {
     "artist": "Caravan Palace",
-    "genre": "",
     "songName": "Wonderland",
     "tags": [
       "swing"
@@ -198,7 +175,6 @@
   },
   {
     "artist": "Cattarse",
-    "genre": "",
     "songName": "You Blew My Mind",
     "tags": [
       "fun"
@@ -206,7 +182,6 @@
   },
   {
     "artist": "Cattarse",
-    "genre": "",
     "songName": "Walking On Glass",
     "tags": [
       "fun"
@@ -214,7 +189,6 @@
   },
   {
     "artist": "Chopin",
-    "genre": "",
     "songName": "Венский Вальс",
     "tags": [
       "sleep",
@@ -223,7 +197,6 @@
   },
   {
     "artist": "Chopin",
-    "genre": "",
     "songName": "Вальс № 10",
     "tags": [
       "classic"
@@ -231,7 +204,6 @@
   },
   {
     "artist": "Chopin",
-    "genre": "",
     "songName": "Valse Op 64 № 2",
     "tags": [
       "sleep",
@@ -240,7 +212,6 @@
   },
   {
     "artist": "Chopin",
-    "genre": "",
     "songName": "Revolutionary Etude",
     "tags": [
       "think",
@@ -249,7 +220,6 @@
   },
   {
     "artist": "Chris De Burgh",
-    "genre": "",
     "songName": "The Lady In Red",
     "tags": [
       "think",
@@ -258,7 +228,6 @@
   },
   {
     "artist": "Chris Isaak",
-    "genre": "",
     "songName": "Wicked Game",
     "tags": [
       "think",
@@ -267,7 +236,6 @@
   },
   {
     "artist": "Christine And The Queens",
-    "genre": "",
     "songName": "5 Dollars",
     "tags": [
       "think"
@@ -275,7 +243,6 @@
   },
   {
     "artist": "Chuck Berry",
-    "genre": "",
     "songName": "Johnny B Goode",
     "tags": [
       "swing"
@@ -283,7 +250,6 @@
   },
   {
     "artist": "Chvrches",
-    "genre": "",
     "songName": "My Enemy",
     "tags": [
       "think"
@@ -291,7 +257,6 @@
   },
   {
     "artist": "Cirque Du Soleil",
-    "genre": "",
     "songName": "Querer",
     "tags": [
       "classic"
@@ -299,7 +264,6 @@
   },
   {
     "artist": "Citizen Cope",
-    "genre": "",
     "songName": "Salvation",
     "tags": [
       "think",
@@ -308,7 +272,6 @@
   },
   {
     "artist": "Cold War Kids",
-    "genre": "",
     "songName": "Love Is Mystical",
     "tags": [
       "swing",
@@ -317,7 +280,6 @@
   },
   {
     "artist": "Cream Soda",
-    "genre": "",
     "songName": "Kto Ty",
     "tags": [
       "think",
@@ -326,7 +288,6 @@
   },
   {
     "artist": "Crx",
-    "genre": "",
     "songName": "Broken Bones",
     "tags": [
       "think",
@@ -335,7 +296,6 @@
   },
   {
     "artist": "Cyn",
-    "genre": "",
     "songName": "Believer",
     "tags": [
       "think"
@@ -343,7 +303,6 @@
   },
   {
     "artist": "Dean Lewis",
-    "genre": "",
     "songName": "Be Alright",
     "tags": [
       "sad"
@@ -351,7 +310,6 @@
   },
   {
     "artist": "Des Rocs",
-    "genre": "",
     "songName": "Used To The Darkness",
     "tags": [
       "think",
@@ -360,7 +318,6 @@
   },
   {
     "artist": "Die Antwoord",
-    "genre": "",
     "songName": "Happy Go Sucky Fucky",
     "tags": [
       "fun",
@@ -369,7 +326,6 @@
   },
   {
     "artist": "Die Antwoord",
-    "genre": "",
     "songName": "Cookie Thumper",
     "tags": [
       "move"
@@ -377,7 +333,6 @@
   },
   {
     "artist": "Die Antwoord",
-    "genre": "",
     "songName": "Babys On Fire",
     "tags": [
       "move"
@@ -385,7 +340,6 @@
   },
   {
     "artist": "Die Antwoord",
-    "genre": "",
     "songName": "Stoopid Rich",
     "tags": [
       "think"
@@ -393,7 +347,6 @@
   },
   {
     "artist": "Elderbrook",
-    "genre": "",
     "songName": "Good Enough",
     "tags": [
       "think",
@@ -402,7 +355,6 @@
   },
   {
     "artist": "Ella Fitzgerald",
-    "genre": "",
     "songName": "Fiva",
     "tags": [
       "think"
@@ -410,7 +362,6 @@
   },
   {
     "artist": "Elliot Moss",
-    "genre": "",
     "songName": "Closedloop",
     "tags": [
       "think",
@@ -419,7 +370,6 @@
   },
   {
     "artist": "Elliot Moss",
-    "genre": "",
     "songName": "Slip",
     "tags": [
       "think"
@@ -427,7 +377,6 @@
   },
   {
     "artist": "Eminem",
-    "genre": "",
     "songName": "Lucky You",
     "tags": [
       "hate",
@@ -436,7 +385,6 @@
   },
   {
     "artist": "Fhin",
-    "genre": "",
     "songName": "But Now A Warm Feel Is Running",
     "tags": [
       "think"
@@ -444,7 +392,6 @@
   },
   {
     "artist": "Fka Twigs",
-    "genre": "",
     "songName": "Cellophane",
     "tags": [
       "think"
@@ -452,7 +399,6 @@
   },
   {
     "artist": "Frank Sinatra",
-    "genre": "",
     "songName": "My Way",
     "tags": [
       "think"
@@ -460,7 +406,6 @@
   },
   {
     "artist": "French Montana",
-    "genre": "",
     "songName": "No Stylist",
     "tags": [
       "think",
@@ -470,7 +415,6 @@
   },
   {
     "artist": "Ghostemane",
-    "genre": "",
     "songName": "Venom",
     "tags": [
       "hate",
@@ -479,7 +423,6 @@
   },
   {
     "artist": "Ghostly Kisses",
-    "genre": "",
     "songName": "Empty Note",
     "tags": [
       "think",
@@ -489,7 +432,6 @@
   },
   {
     "artist": "Gnarls Barkley",
-    "genre": "",
     "songName": "Crazy",
     "tags": [
       "think"
@@ -497,7 +439,6 @@
   },
   {
     "artist": "Governors",
-    "genre": "",
     "songName": "Is This Love",
     "tags": [
       "think",
@@ -506,7 +447,6 @@
   },
   {
     "artist": "Grandson",
-    "genre": "",
     "songName": "Blood Water",
     "tags": [
       "fun",
@@ -516,7 +456,6 @@
   },
   {
     "artist": "Hayden James",
-    "genre": "",
     "songName": "Better Together",
     "tags": [
       "swing",
@@ -525,7 +464,6 @@
   },
   {
     "artist": "Hozier",
-    "genre": "",
     "songName": "Dinner And Diatribes",
     "tags": [
       "think"
@@ -533,7 +471,6 @@
   },
   {
     "artist": "Hozier",
-    "genre": "",
     "songName": "Movement",
     "tags": [
       "think"
@@ -541,7 +478,6 @@
   },
   {
     "artist": "Hypnogaja",
-    "genre": "",
     "songName": "Silver Star",
     "tags": [
       "fun"
@@ -549,7 +485,6 @@
   },
   {
     "artist": "I Am Joffrey And Tim Schaufert",
-    "genre": "",
     "songName": "All Of Me",
     "tags": [
       "think",
@@ -558,7 +493,6 @@
   },
   {
     "artist": "I Am Kloot",
-    "genre": "",
     "songName": "Avenue Of Hope",
     "tags": [
       "think",
@@ -567,7 +501,6 @@
   },
   {
     "artist": "I Am Kloot",
-    "genre": "",
     "songName": "Hold Back The Night",
     "tags": [
       "think"
@@ -575,7 +508,6 @@
   },
   {
     "artist": "Ic3peak",
-    "genre": "",
     "songName": "Смерти Больше Нет",
     "tags": [
       "fun",
@@ -584,7 +516,6 @@
   },
   {
     "artist": "Ic3peak",
-    "genre": "",
     "songName": "Сказка",
     "tags": [
       "fun",
@@ -593,7 +524,6 @@
   },
   {
     "artist": "Imagine Dragons",
-    "genre": "",
     "songName": "Thunder",
     "tags": [
       "think"
@@ -601,7 +531,6 @@
   },
   {
     "artist": "Imagine Dragons",
-    "genre": "",
     "songName": "Natural",
     "tags": [
       "think",
@@ -610,7 +539,6 @@
   },
   {
     "artist": "Imagine Dragons",
-    "genre": "",
     "songName": "Believer",
     "tags": [
       "fun"
@@ -618,7 +546,6 @@
   },
   {
     "artist": "Imagine Dragons",
-    "genre": "",
     "songName": "I Dont Know Why",
     "tags": [
       "think",
@@ -627,7 +554,6 @@
   },
   {
     "artist": "Irma Thomas",
-    "genre": "",
     "songName": "Anyone Who Knows What Love Is",
     "tags": [
       "think"
@@ -635,7 +561,6 @@
   },
   {
     "artist": "Jack White",
-    "genre": "",
     "songName": "Love Is Blindness",
     "tags": [
       "think",
@@ -644,7 +569,6 @@
   },
   {
     "artist": "Jade Bird",
-    "genre": "",
     "songName": "Uh Huh",
     "tags": [
       "swing",
@@ -653,7 +577,6 @@
   },
   {
     "artist": "Jaden Smith",
-    "genre": "",
     "songName": "Watch Me",
     "tags": [
       "move"
@@ -661,7 +584,6 @@
   },
   {
     "artist": "Jah Khalib",
-    "genre": "",
     "songName": "Медина",
     "tags": [
       "think"
@@ -669,7 +591,6 @@
   },
   {
     "artist": "Jax Jones",
-    "genre": "",
     "songName": "Ring Ring",
     "tags": [
       "swing"
@@ -677,7 +598,6 @@
   },
   {
     "artist": "Jessie Ware",
-    "genre": "",
     "songName": "Running",
     "tags": [
       "think"
@@ -685,7 +605,6 @@
   },
   {
     "artist": "Joji",
-    "genre": "",
     "songName": "Slow Dancing In The Dark",
     "tags": [
       "think",
@@ -694,7 +613,6 @@
   },
   {
     "artist": "Joyner Lucas",
-    "genre": "",
     "songName": "I Love",
     "tags": [
       "think",
@@ -704,7 +622,6 @@
   },
   {
     "artist": "Jungle",
-    "genre": "",
     "songName": "Casio",
     "tags": [
       "swing"
@@ -712,7 +629,6 @@
   },
   {
     "artist": "Justin Jay",
-    "genre": "",
     "songName": "Climbing Trees",
     "tags": [
       "think"
@@ -720,7 +636,6 @@
   },
   {
     "artist": "Kai Rosenkranz",
-    "genre": "",
     "songName": "Vista Point",
     "tags": [
       "think",
@@ -730,7 +645,6 @@
   },
   {
     "artist": "Kaleida",
-    "genre": "",
     "songName": "Think",
     "tags": [
       "think"
@@ -738,7 +652,6 @@
   },
   {
     "artist": "Kaleida",
-    "genre": "",
     "songName": "Take Me To The River",
     "tags": [
       "think"
@@ -746,7 +659,6 @@
   },
   {
     "artist": "Kaleida",
-    "genre": "",
     "songName": "Aliaa",
     "tags": [
       "think"
@@ -754,7 +666,6 @@
   },
   {
     "artist": "Kazka",
-    "genre": "",
     "songName": "Плакала",
     "tags": [
       "sad"
@@ -762,7 +673,6 @@
   },
   {
     "artist": "Kuroiumi",
-    "genre": "",
     "songName": "Passion",
     "tags": [
       "think",
@@ -772,7 +682,6 @@
   },
   {
     "artist": "Kuroiumi",
-    "genre": "",
     "songName": "Asleep",
     "tags": [
       "think",
@@ -782,7 +691,6 @@
   },
   {
     "artist": "Kyle Landry",
-    "genre": "",
     "songName": "For The Damaged Coda",
     "tags": [
       "think",
@@ -792,7 +700,6 @@
   },
   {
     "artist": "Lalaland",
-    "genre": "",
     "songName": "City Of Stars",
     "tags": [
       "think",
@@ -801,7 +708,6 @@
   },
   {
     "artist": "Lana Del Rey",
-    "genre": "",
     "songName": "Hope Is A Dangerous Thing For A Woman Like Me",
     "tags": [
       "think",
@@ -811,7 +717,6 @@
   },
   {
     "artist": "Lastlings",
-    "genre": "",
     "songName": "Urges",
     "tags": [
       "think"
@@ -819,7 +724,6 @@
   },
   {
     "artist": "Laud",
-    "genre": "",
     "songName": "Waiting",
     "tags": [
       "think",
@@ -828,7 +732,6 @@
   },
   {
     "artist": "Lil Wayne",
-    "genre": "",
     "songName": "Mona Lisa",
     "tags": [
       "think",
@@ -837,7 +740,6 @@
   },
   {
     "artist": "Linkin Park",
-    "genre": "",
     "songName": "Numb",
     "tags": [
       "sad",
@@ -846,7 +748,6 @@
   },
   {
     "artist": "Linkin Park",
-    "genre": "",
     "songName": "From The Inside",
     "tags": [
       "fun"
@@ -854,7 +755,6 @@
   },
   {
     "artist": "Logic",
-    "genre": "",
     "songName": "44 More",
     "tags": [
       "think",
@@ -863,7 +763,6 @@
   },
   {
     "artist": "Lost Frequencies",
-    "genre": "",
     "songName": "Melody",
     "tags": [
       "think",
@@ -872,7 +771,6 @@
   },
   {
     "artist": "Lp",
-    "genre": "",
     "songName": "When Were High",
     "tags": [
       "think",
@@ -881,7 +779,6 @@
   },
   {
     "artist": "Lp",
-    "genre": "",
     "songName": "Tightrope",
     "tags": [
       "think"
@@ -889,7 +786,6 @@
   },
   {
     "artist": "Lubomyr Melnyk",
-    "genre": "",
     "songName": "Requiem For A Fallen Tree",
     "tags": [
       "sleep",
@@ -898,7 +794,6 @@
   },
   {
     "artist": "Ludovico Einaudi",
-    "genre": "",
     "songName": "Walk",
     "tags": [
       "think",
@@ -907,7 +802,6 @@
   },
   {
     "artist": "Ludovico Einaudi",
-    "genre": "",
     "songName": "Fly",
     "tags": [
       "think",
@@ -917,7 +811,6 @@
   },
   {
     "artist": "Ludovico Einaudi",
-    "genre": "",
     "songName": "Experience",
     "tags": [
       "think",
@@ -928,7 +821,6 @@
   },
   {
     "artist": "Luigi Rubino",
-    "genre": "",
     "songName": "Les Larmes Dautomne",
     "tags": [
       "think",
@@ -939,7 +831,6 @@
   },
   {
     "artist": "Mark Ronson",
-    "genre": "",
     "songName": "Nothing Breaks Like A Heart",
     "tags": [
       "think",
@@ -948,7 +839,6 @@
   },
   {
     "artist": "Maruv",
-    "genre": "",
     "songName": "Black Water",
     "tags": [
       "think",
@@ -958,7 +848,6 @@
   },
   {
     "artist": "Maruv",
-    "genre": "",
     "songName": "Looking For You",
     "tags": [
       "think",
@@ -968,7 +857,6 @@
   },
   {
     "artist": "Maruv",
-    "genre": "",
     "songName": "Focus On Me",
     "tags": [
       "think",
@@ -978,7 +866,6 @@
   },
   {
     "artist": "Maruv And Boosin",
-    "genre": "",
     "songName": "Drunk Groove",
     "tags": [
       "fun",
@@ -987,7 +874,6 @@
   },
   {
     "artist": "Max Richter",
-    "genre": "",
     "songName": "November",
     "tags": [
       "sleep",
@@ -996,7 +882,6 @@
   },
   {
     "artist": "Melody Gardot",
-    "genre": "",
     "songName": "Baby Im A Fool",
     "tags": [
       "think"
@@ -1004,7 +889,6 @@
   },
   {
     "artist": "Men I Trust",
-    "genre": "",
     "songName": "System",
     "tags": [
       "think"
@@ -1012,7 +896,6 @@
   },
   {
     "artist": "Mj Cole And Freya Ridings",
-    "genre": "",
     "songName": "Waking Up",
     "tags": [
       "think",
@@ -1021,7 +904,6 @@
   },
   {
     "artist": "Movement",
-    "genre": "",
     "songName": "Us",
     "tags": [
       "think"
@@ -1029,7 +911,6 @@
   },
   {
     "artist": "Mumford And Sons",
-    "genre": "",
     "songName": "If I Say",
     "tags": [
       "sad"
@@ -1037,7 +918,6 @@
   },
   {
     "artist": "Muse",
-    "genre": "",
     "songName": "Pressure",
     "tags": [
       "fun",
@@ -1047,7 +927,6 @@
   },
   {
     "artist": "My Chemical Romance",
-    "genre": "",
     "songName": "The Sharpest Lives",
     "tags": [
       "fun",
@@ -1056,7 +935,6 @@
   },
   {
     "artist": "Nbsplv",
-    "genre": "",
     "songName": "Cold Waves",
     "tags": [
       "think",
@@ -1065,7 +943,6 @@
   },
   {
     "artist": "Nemea And Palastic",
-    "genre": "",
     "songName": "Open Window",
     "tags": [
       "think"
@@ -1073,7 +950,6 @@
   },
   {
     "artist": "Nf",
-    "genre": "",
     "songName": "Why",
     "tags": [
       "think",
@@ -1082,7 +958,6 @@
   },
   {
     "artist": "Nothing But Thieves",
-    "genre": "",
     "songName": "Take This Lonely Heart",
     "tags": [
       "think"
@@ -1090,7 +965,6 @@
   },
   {
     "artist": "Onerepublic",
-    "genre": "",
     "songName": "Wherever I Go",
     "tags": [
       "swing"
@@ -1098,7 +972,6 @@
   },
   {
     "artist": "Otzeki",
-    "genre": "",
     "songName": "Falling Out",
     "tags": [
       "think"
@@ -1106,7 +979,6 @@
   },
   {
     "artist": "Ozzy Osbourne",
-    "genre": "",
     "songName": "I Just Want You",
     "tags": [
       "sad",
@@ -1115,7 +987,6 @@
   },
   {
     "artist": "Panic! At The Disco",
-    "genre": "",
     "songName": "Girl That You Love",
     "tags": [
       "think",
@@ -1124,7 +995,6 @@
   },
   {
     "artist": "Paolo Nutini",
-    "genre": "",
     "songName": "One Day",
     "tags": [
       "think"
@@ -1132,7 +1002,6 @@
   },
   {
     "artist": "Paolo Nutini",
-    "genre": "",
     "songName": "Iron Sky",
     "tags": [
       "think"
@@ -1140,7 +1009,6 @@
   },
   {
     "artist": "Patricia Kaas",
-    "genre": "",
     "songName": "Avec Le Temps",
     "tags": [
       "think",
@@ -1149,7 +1017,6 @@
   },
   {
     "artist": "Poets Of The Fall",
-    "genre": "",
     "songName": "Temple Of Thought",
     "tags": [
       "think",
@@ -1158,7 +1025,6 @@
   },
   {
     "artist": "Poets Of The Fall",
-    "genre": "",
     "songName": "Sleep, Sugar",
     "tags": [
       "think",
@@ -1167,7 +1033,6 @@
   },
   {
     "artist": "Poets Of The Fall",
-    "genre": "",
     "songName": "Dawn",
     "tags": [
       "think"
@@ -1175,7 +1040,6 @@
   },
   {
     "artist": "Poets Of The Fall",
-    "genre": "",
     "songName": "Where Do We Draw The Line",
     "tags": [
       "think",
@@ -1185,7 +1049,6 @@
   },
   {
     "artist": "Poets Of The Fall",
-    "genre": "",
     "songName": "Carnival Of Rust",
     "tags": [
       "think"
@@ -1193,7 +1056,6 @@
   },
   {
     "artist": "Portugal. The Man",
-    "genre": "",
     "songName": "Mr Lonely",
     "tags": [
       "think",
@@ -1202,7 +1064,6 @@
   },
   {
     "artist": "Portugal. The Man",
-    "genre": "",
     "songName": "Feel It Still",
     "tags": [
       "swing"
@@ -1210,7 +1071,6 @@
   },
   {
     "artist": "Post Malone",
-    "genre": "",
     "songName": "Rockstar",
     "tags": [
       "think"
@@ -1218,7 +1078,6 @@
   },
   {
     "artist": "Post Malone",
-    "genre": "",
     "songName": "Better Now",
     "tags": [
       "think"
@@ -1226,7 +1085,6 @@
   },
   {
     "artist": "Post Malone And Swae Lee",
-    "genre": "",
     "songName": "Sunflower",
     "tags": [
       "think"
@@ -1234,7 +1092,6 @@
   },
   {
     "artist": "Pouya",
-    "genre": "",
     "songName": "1000 Rounds",
     "tags": [
       "fun",
@@ -1243,7 +1100,6 @@
   },
   {
     "artist": "Puscifer",
-    "genre": "",
     "songName": "Rev 22 20",
     "tags": [
       "hate"
@@ -1251,7 +1107,6 @@
   },
   {
     "artist": "Puscifer",
-    "genre": "",
     "songName": "The Undertaker",
     "tags": [
       "hate"
@@ -1259,7 +1114,6 @@
   },
   {
     "artist": "Radiohead",
-    "genre": "",
     "songName": "Everything In Its Right Place",
     "tags": [
       "think",
@@ -1269,7 +1123,6 @@
   },
   {
     "artist": "Radiohead",
-    "genre": "",
     "songName": "Daydreaming",
     "tags": [
       "think",
@@ -1278,7 +1131,6 @@
   },
   {
     "artist": "Ramin Djawadi",
-    "genre": "",
     "songName": "Light Of The Seven",
     "tags": [
       "sleep",
@@ -1287,7 +1139,6 @@
   },
   {
     "artist": "Remo Giazotto",
-    "genre": "",
     "songName": "Adagio Albioni",
     "tags": [
       "think",
@@ -1298,7 +1149,6 @@
   },
   {
     "artist": "Rompasso",
-    "genre": "",
     "songName": "Ignis",
     "tags": [
       "swing",
@@ -1307,7 +1157,6 @@
   },
   {
     "artist": "Saint Jhn",
-    "genre": "",
     "songName": "Roses",
     "tags": [
       "think"
@@ -1315,7 +1164,6 @@
   },
   {
     "artist": "Sarah Mclachlan",
-    "genre": "",
     "songName": "Gloomy Sunday",
     "tags": [
       "think",
@@ -1324,7 +1172,6 @@
   },
   {
     "artist": "Sasha Daniel",
-    "genre": "",
     "songName": "Bleeding Rain",
     "tags": [
       "think"
@@ -1332,7 +1179,6 @@
   },
   {
     "artist": "Seether",
-    "genre": "",
     "songName": "Careless Whisper",
     "tags": [
       "fun"
@@ -1340,7 +1186,6 @@
   },
   {
     "artist": "Seth Xvi",
-    "genre": "",
     "songName": "Amazones",
     "tags": [
       "think"
@@ -1348,7 +1193,6 @@
   },
   {
     "artist": "She Keeps Bees",
-    "genre": "",
     "songName": "Radiance",
     "tags": [
       "think"
@@ -1356,7 +1200,6 @@
   },
   {
     "artist": "She Keeps Bees",
-    "genre": "",
     "songName": "Calm Walk In The Dark",
     "tags": [
       "think",
@@ -1366,7 +1209,6 @@
   },
   {
     "artist": "Sigrid",
-    "genre": "",
     "songName": "Everybody Knows",
     "tags": [
       "think",
@@ -1375,7 +1217,6 @@
   },
   {
     "artist": "Simon And Garfunkel",
-    "genre": "",
     "songName": "The Sound Of Silence",
     "tags": [
       "think",
@@ -1384,7 +1225,6 @@
   },
   {
     "artist": "Sir Mix A Lot",
-    "genre": "",
     "songName": "Baby Got Back",
     "tags": [
       "move"
@@ -1392,7 +1232,6 @@
   },
   {
     "artist": "Son Lux",
-    "genre": "",
     "songName": "Surrounded",
     "tags": [
       "think"
@@ -1400,7 +1239,6 @@
   },
   {
     "artist": "Son Lux",
-    "genre": "",
     "songName": "Aquatic",
     "tags": [
       "think",
@@ -1410,7 +1248,6 @@
   },
   {
     "artist": "Sting",
-    "genre": "",
     "songName": "Until",
     "tags": [
       "think"
@@ -1418,7 +1255,6 @@
   },
   {
     "artist": "Sting",
-    "genre": "",
     "songName": "Shape Of My Heart",
     "tags": [
       "think",
@@ -1427,7 +1263,6 @@
   },
   {
     "artist": "Syml",
-    "genre": "",
     "songName": "Clean Eyes",
     "tags": [
       "think"
@@ -1435,7 +1270,6 @@
   },
   {
     "artist": "Syml",
-    "genre": "",
     "songName": "Fear Of A Water",
     "tags": [
       "think",
@@ -1445,7 +1279,6 @@
   },
   {
     "artist": "Talos",
-    "genre": "",
     "songName": "Landscapes",
     "tags": [
       "think",
@@ -1454,7 +1287,6 @@
   },
   {
     "artist": "The Atomica Project",
-    "genre": "",
     "songName": "Into The Arms Of Strangers",
     "tags": [
       "think",
@@ -1463,7 +1295,6 @@
   },
   {
     "artist": "The Ink Spots",
-    "genre": "",
     "songName": "Address Unknown",
     "tags": [
       "think"
@@ -1471,7 +1302,6 @@
   },
   {
     "artist": "The Killers",
-    "genre": "",
     "songName": "The Man",
     "tags": [
       "fun",
@@ -1481,7 +1311,6 @@
   },
   {
     "artist": "The Rolling Stones",
-    "genre": "",
     "songName": "Laugh I Nearly Died",
     "tags": [
       "think",
@@ -1490,7 +1319,6 @@
   },
   {
     "artist": "The Weeknd",
-    "genre": "",
     "songName": "Call Out My Name",
     "tags": [
       "think",
@@ -1499,7 +1327,6 @@
   },
   {
     "artist": "Thelonious Monk",
-    "genre": "",
     "songName": "The Man I Love",
     "tags": [
       "sad",
@@ -1508,7 +1335,6 @@
   },
   {
     "artist": "Three Days Grace",
-    "genre": "",
     "songName": "I Hate Everything About You",
     "tags": [
       "sad",
@@ -1518,7 +1344,6 @@
   },
   {
     "artist": "Twenty One Pilots",
-    "genre": "",
     "songName": "Message Man",
     "tags": [
       "fun",
@@ -1527,7 +1352,6 @@
   },
   {
     "artist": "Twenty One Pilots",
-    "genre": "",
     "songName": "Nico And The Niners",
     "tags": [
       "think",
@@ -1536,7 +1360,6 @@
   },
   {
     "artist": "Tyga Nicki Minaj",
-    "genre": "",
     "songName": "Dip",
     "tags": [
       "hate",
@@ -1545,7 +1368,6 @@
   },
   {
     "artist": "Unlike Pluto",
-    "genre": "",
     "songName": "Everything Black",
     "tags": [
       "swing"
@@ -1553,7 +1375,6 @@
   },
   {
     "artist": "Unlike Pluto",
-    "genre": "",
     "songName": "Let It Bleed",
     "tags": [
       "think"
@@ -1561,7 +1382,6 @@
   },
   {
     "artist": "Vivaldi",
-    "genre": "",
     "songName": "Оркестром Ля Минор Часть I",
     "tags": [
       "classic"
@@ -1569,7 +1389,6 @@
   },
   {
     "artist": "Vivaldi",
-    "genre": "",
     "songName": "Winter",
     "tags": [
       "classic"
@@ -1577,7 +1396,6 @@
   },
   {
     "artist": "Xxxtentacion",
-    "genre": "",
     "songName": "The Remedy For A Broken Heart",
     "tags": [
       "think"
@@ -1585,7 +1403,6 @@
   },
   {
     "artist": "Xxxtentacion",
-    "genre": "",
     "songName": "Schizophrenia",
     "tags": [
       "fun",
@@ -1595,7 +1412,6 @@
   },
   {
     "artist": "Yiruma",
-    "genre": "",
     "songName": "Love Hurts",
     "tags": [
       "think",
@@ -1606,7 +1422,6 @@
   },
   {
     "artist": "Yonuka",
-    "genre": "",
     "songName": "Own Worst Enemy",
     "tags": [
       "fun",
@@ -1616,7 +1431,6 @@
   },
   {
     "artist": "Лиза Громова",
-    "genre": "",
     "songName": "Перегрызут",
     "tags": [
       "think"
@@ -1624,7 +1438,6 @@
   },
   {
     "artist": "Луна",
-    "genre": "",
     "songName": "Jukebox",
     "tags": [
       "think"
@@ -1632,7 +1445,6 @@
   },
   {
     "artist": "Мальбэк",
-    "genre": "",
     "songName": "Равнодушие",
     "tags": [
       "think",
@@ -1641,7 +1453,6 @@
   },
   {
     "artist": "Мария Чайковская",
-    "genre": "",
     "songName": "В Комнате Цветных",
     "tags": [
       "think",
@@ -1650,7 +1461,6 @@
   },
   {
     "artist": "Прокофьев",
-    "genre": "",
     "songName": "Organ Prelude And Fugue In Dmoll",
     "tags": [
       "think",
@@ -1661,7 +1471,6 @@
   },
   {
     "artist": "Сплин",
-    "genre": "",
     "songName": "Феллини",
     "tags": [
       "think",

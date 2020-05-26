@@ -2,7 +2,7 @@ package com.dharbar.template.service.melodypref.service.it;
 
 import com.dharbar.template.controller.dto.MusicAttributes;
 import com.dharbar.template.service.melodypref.repo.entity.MelodyPref;
-import com.dharbar.template.service.melodypref.service.MelodyPreferencesService;
+import com.dharbar.template.service.melodypref.service.MusicAttributesPreferencesService;
 import com.dharbar.template.utils.ShouldWhenUnderscoreNameGenerator;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayNameGeneration;
@@ -22,12 +22,12 @@ import java.util.List;
 @ActiveProfiles("mongo")
 //@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 @DataMongoTest
-@Import(MelodyPreferencesService.class)
+@Import(MusicAttributesPreferencesService.class)
 @ExtendWith(SpringExtension.class)
-class MelodyPreferencesServiceTest {
+class MusicAttributesPreferencesServiceTest {
 
     @Autowired
-    private MelodyPreferencesService target;
+    private MusicAttributesPreferencesService target;
 
     @Autowired
     private MongoTemplate mongoTemplate;
@@ -35,7 +35,8 @@ class MelodyPreferencesServiceTest {
     // Or recreate MongoBy annotation
     @AfterEach
     void clean() {
-        mongoTemplate.getDb().drop();
+        // TODO
+//        mongoTemplate.getDb().drop();
     }
 
     @Test

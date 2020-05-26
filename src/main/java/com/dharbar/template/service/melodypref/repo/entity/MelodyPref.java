@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
-@Profile("mongo")
+@Profile({"mongo", "mongoprod"})
 @Builder(toBuilder = true)
 @Data
 @Document("melody")
@@ -25,6 +25,8 @@ public class MelodyPref {
     private String artist;
 
     private String songName;
+
+    private List<String> genres;
 
     private String genre;
 

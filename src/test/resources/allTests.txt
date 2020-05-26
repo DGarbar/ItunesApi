@@ -1,0 +1,1030 @@
+
+package com.dharbar.template;
+
+@TestPropertySource(locations = "/test-config.properties")
+@ActiveProfiles("local")
+@SpringBootTest
+class ApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+}
+
+package com.dharbar.template.controller;
+
+@ActiveProfiles("local")
+class MusicControllerTest extends IntegrationTest {
+
+    @MockBean
+    private TokenProvider tokenProvider;
+
+    @Test
+    void music_return500_searchNotProvided() {
+        webTestClient.get()
+                .uri("/music?search=")
+                .exchange()
+                .expectStatus().is5xxServerError()
+                .expectBody();
+    }
+
+    @SneakyThrows
+    @Test
+    void music_return500_serviceUnauthorized() {
+        given(tokenProvider.provideToken()).willReturn("test");
+        wireMockServer.stubFor(get(urlPathEqualTo("/search"))
+                .withQueryParam("types", equalTo("songs"))
+                .withQueryParam("term", equalTo("test"))
+                .withHeader("Authorization", equalTo("Bearer test"))
+                .willReturn(aResponse()
+                        .withStatus(HttpStatus.UNAUTHORIZED.value())));
+
+        webTestClient.get()
+                .uri("/music?search=test")
+                .exchange()
+                .expectStatus().is5xxServerError()
+                .expectBody();
+    }
+
+    @SneakyThrows
+    @Test
+    void music_returnNothing_serviceIsRequestedEmpty() {
+        given(tokenProvider.provideToken()).willReturn("test");
+        wireMockServer.stubFor(get(urlPathEqualTo("/search"))
+                .withQueryParam("types", equalTo("songs"))
+                .withQueryParam("term", equalTo("test"))
+                .withHeader("Authorization", equalTo("Bearer test"))
+                .willReturn(aResponse()
+                        .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                        .withBody("{\"results\": {}}")));
+
+        webTestClient.get()
+                .uri("/music?search=test")
+                .exchange()
+                .expectStatus().isOk()
+                .expectBodyList(MusicAsResource.class).hasSize(0);
+    }
+
+    @SneakyThrows
+    @Test
+    void music_returnParsedMusic_serviceIsReturned() {
+        given(tokenProvider.provideToken()).willReturn("test");
+        wireMockServer.stubFor(get(urlPathEqualTo("/search"))
+                .withQueryParam("types", equalTo("songs"))
+                .withQueryParam("term", equalTo("test"))
+                .withHeader("Authorization", equalTo("Bearer test"))
+                .willReturn(aResponse()
+                        .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                        .withBody(jsonFrom("/it/itunes/response/songsResponse.json"))));
+
+        webTestClient.get()
+                .uri("/music?search=test")
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody().json(jsonFrom("/it/musicSearcher/songsParsed.json"));
+    }
+}
+
+package com.dharbar.template.controller;@ActiveProfiles("local")
+
+@AutoConfigureWebTestClient
+class SearchControllerTest extends IntegrationTest {
+
+    private static final String TEST_TOKEN = "test token";
+
+    @Test
+    void search_return500_artistNotProvided() {
+        webTestClient.get()
+                .uri("/search?artist=")
+                .exchange()
+                .expectStatus().is5xxServerError()
+                .expectBody();
+    }
+
+    @Test
+    void getByUserId_return500_userIdNotFound() {
+        wireMockServer.stubFor(get("/search")
+                .withHeader("Authorization", equalTo("Bearer " + TEST_TOKEN))
+                .willReturn(aResponse()
+                        .withStatus(HttpStatus.UNAUTHORIZED.value())));
+
+        webTestClient.get()
+                .uri("/search?artist=test")
+                .exchange()
+                .expectStatus().is5xxServerError()
+                .expectBody();
+    }
+}
+
+package com.dharbar.template.controller;@ActiveProfiles("local")
+
+class UserControllerTest extends IntegrationTest {
+
+    @Test
+    void getByUserId_return404_userIdNotFound() {
+        webTestClient.get()
+                .uri("/users/100")
+                .exchange()
+                .expectStatus().isNotFound()
+                .expectBody();
+    }
+
+    @Test
+    void getByUserId_returnUser_userIdFound() {
+        User result = webTestClient.get()
+                .uri("/users/1")
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody(User.class).returnResult().getResponseBody();
+
+        assertThat(result).isEqualTo(User.of("test", "http://test"));
+    }
+}
+
+package com.dharbar.template.service;
+
+
+@DisplayNameGeneration(ShouldWhenUnderscoreNameGenerator.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@TestPropertySource(locations = "/test-config.properties")
+@ContextConfiguration(initializers = {WireMockInitializer.class})
+public class IntegrationTest {
+
+    @Autowired
+    protected ObjectMapper mapper;
+
+    @Autowired
+    protected WebTestClient webTestClient;
+
+    @Autowired
+    protected WireMockServer wireMockServer;
+
+//    @BeforeEach
+//    void configureSystemUnderTest() {
+//        WIRE_MOCK = new WireMockServer(8099, ITUNES_WIREMOCK_PORT);
+//    }
+
+    @AfterEach
+    public void afterEach() {
+        wireMockServer.resetAll();
+    }
+
+    @SneakyThrows
+    public String jsonFrom(String path) {
+        return mapper.writeValueAsString(mapper.readTree(IntegrationTest.class.getResource(path)));
+    }
+}
+
+package com.dharbar.template.service.melodypref.service.it;
+
+
+@DisplayNameGeneration(ShouldWhenUnderscoreNameGenerator.class)
+@ActiveProfiles("mongo")
+//@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
+@DataMongoTest
+@Import(MelodyPreferencesService.class)
+@ExtendWith(SpringExtension.class)
+class MelodyPreferencesServiceTest {
+
+    @Autowired
+    private MelodyPreferencesService target;
+
+    @Autowired
+    private MongoTemplate mongoTemplate;
+
+    // Or recreate MongoBy annotation
+    @AfterEach
+    void clean() {
+        mongoTemplate.getDb().drop();
+    }
+
+    @Test
+    void findByMusicAttributes_returnEmpty_noResult() {
+        // when and then
+        var request = MusicAttributes.builder()
+                .artists(List.of("test"))
+                .build();
+
+        StepVerifier.create(target.findByMusicAttributes(request))
+                .expectNextCount(0)
+                .verifyComplete();
+    }
+
+    @Test
+    void findByMusicAttributes_returnMelodyPref_foundByArtist() {
+        // given
+        var melodyPref1 = MelodyPref.builder().artist("test").genre("testGenre1").build();
+        var melodyPref2 = MelodyPref.builder().artist("test").genre("testGenre2").build();
+        mongoTemplate.save(melodyPref1, "melody");
+        mongoTemplate.save(melodyPref2, "melody");
+
+        // when and then
+        var request = MusicAttributes.builder()
+                .artists(List.of("test"))
+                .build();
+
+        StepVerifier.create(target.findByMusicAttributes(request))
+                .expectNext(melodyPref1, melodyPref2)
+                .verifyComplete();
+    }
+
+    @Test
+    void findByMusicAttributes_returnMelodyPref_foundByGenre() {
+        // given
+        var melodyPref1 = MelodyPref.builder().artist("test").genre("testGenre1").build();
+        var melodyPref2 = MelodyPref.builder().artist("test").genre("testGenre2").build();
+        mongoTemplate.save(melodyPref1, "melody");
+        mongoTemplate.save(melodyPref2, "melody");
+
+        // when and then
+        var request = MusicAttributes.builder()
+                .genres(List.of("testGenre1"))
+                .build();
+
+        StepVerifier.create(target.findByMusicAttributes(request))
+                .expectNext(melodyPref1)
+                .verifyComplete();
+    }
+
+    @Test
+    void findByMusicAttributes_returnMelodyPref_foundByTags() {
+        // given
+        var melodyPref1 = MelodyPref.builder().artist("test").tags(List.of("tag1", "tag2")).build();
+        var melodyPref2 = MelodyPref.builder().artist("test").tags(List.of("tag2")).build();
+        mongoTemplate.save(melodyPref1, "melody");
+        mongoTemplate.save(melodyPref2, "melody");
+
+        // when and then
+        var request = MusicAttributes.builder()
+                .tags(List.of("tag2"))
+                .build();
+
+        StepVerifier.create(target.findByMusicAttributes(request))
+                .expectNext(melodyPref1, melodyPref2)
+                .verifyComplete();
+    }
+
+    @Test
+    void findByMusicAttributes_returnMelodyPref_foundByTagsAndGenres() {
+        // given
+        var melodyPref1 = MelodyPref.builder().artist("test").tags(List.of("tag1", "tag2")).build();
+        var melodyPref2 = MelodyPref.builder().artist("test1").tags(List.of("tag2")).genre("genre1").build();
+        var melodyPref3 = MelodyPref.builder().artist("test2").tags(List.of("tag2")).genre("genre1").build();
+        mongoTemplate.save(melodyPref1, "melody");
+        mongoTemplate.save(melodyPref2, "melody");
+        mongoTemplate.save(melodyPref3, "melody");
+
+        // when and then
+        var request = MusicAttributes.builder()
+                .tags(List.of("tag2"))
+                .genres(List.of("genre1"))
+                .build();
+
+        StepVerifier.create(target.findByMusicAttributes(request))
+                .expectNext(melodyPref2, melodyPref3)
+                .verifyComplete();
+    }
+
+    @Test
+    void findByMusicAttributes_returnMelodyPref_foundByMultipleTagsAndGenres() {
+        // given
+        var melodyPref1 = MelodyPref.builder().artist("test").tags(List.of("tag1")).genre("genre1").build();
+        var melodyPref2 = MelodyPref.builder().artist("test1").tags(List.of("tag1", "tag2", "tag3"))
+                .genre("genre1").build();
+        var melodyPref3 = MelodyPref.builder().artist("test2").tags(List.of("tag2")).genre("genre1").build();
+        mongoTemplate.save(melodyPref1, "melody");
+        mongoTemplate.save(melodyPref2, "melody");
+        mongoTemplate.save(melodyPref3, "melody");
+
+        // when and then
+        var request = MusicAttributes.builder()
+                .tags(List.of("tag1", "tag2"))
+                .genres(List.of("genre1"))
+                .build();
+
+        StepVerifier.create(target.findByMusicAttributes(request))
+                .expectNext(melodyPref1, melodyPref2, melodyPref3)
+                .verifyComplete();
+    }
+}
+
+
+package com.dharbar.template.service.melodypref.service.it;
+
+// TODO
+public class MongoDbContainer extends GenericContainer<MongoDbContainer> {
+
+    public static final int MONGODB_PORT = 27017;
+    public static final String DEFAULT_IMAGE_AND_TAG = "mongo:3.2.4";
+
+    public MongoDbContainer() {
+        this(DEFAULT_IMAGE_AND_TAG);
+    }
+
+    public MongoDbContainer(String image) {
+        super(image);
+        addExposedPort(MONGODB_PORT);
+    }
+
+    public Integer getPort() {
+        return getMappedPort(MONGODB_PORT);
+    }
+}
+
+package com.dharbar.template.service.melodypref.service.it;
+
+
+@ActiveProfiles("mongo")
+@ContextConfiguration(initializers = MongoIntegrationTest.MongoDbInitializer.class)
+@SpringBootTest
+@Slf4j
+public class MongoIntegrationTest {
+
+    private static MongoDbContainer mongoDbContainer;
+
+    @BeforeAll
+    public static void init() {
+        mongoDbContainer = new MongoDbContainer();
+        mongoDbContainer.start();
+    }
+
+    public static class MongoDbInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
+        @Override
+        public void initialize(ConfigurableApplicationContext configurableApplicationContext) {
+            log.info("Overriding Spring Properties for mongodb");
+
+            TestPropertyValues.of(
+                    "spring.data.mongodb.host=" + mongoDbContainer.getContainerIpAddress(),
+                    "spring.data.mongodb.port=" + mongoDbContainer.getPort()
+            ).applyTo(configurableApplicationContext);
+        }
+    }
+}
+
+package com.dharbar.template.service.musicresources.itunes.devapi;
+
+@DisplayNameGeneration(ShouldWhenUnderscoreNameGenerator.class)
+class DevApiItunesMusicAttributesMapperTest {
+
+    private DevApiItunesMusicAttributesMapper target;
+
+    @BeforeEach
+    void setUp() {
+        target = new DevApiItunesMusicAttributesMapper();
+    }
+
+    @Test
+    void mapSong_createParam_songIsProvided() {
+        // when
+        var result = target.mapSong("testSongName");
+
+        // then
+        assertThat(result).containsOnly(
+                new BasicNameValuePair("types", "songs"),
+                new BasicNameValuePair("term", "testSongName"));
+    }
+
+    @Test
+    void mapSong_createWithEmpty_songIsEmpty() {
+        // when
+        var result = target.mapSong("");
+
+        // then
+        assertThat(result).containsOnly(
+                new BasicNameValuePair("types", "songs"),
+                new BasicNameValuePair("term", ""));
+    }
+
+    @Test
+    void mapArtist_createParam_artistIsProvided() {
+        // when
+        var result = target.mapArtist("testArtistName");
+
+        // then
+        assertThat(result).containsOnly(
+                new BasicNameValuePair("types", "artists"),
+                new BasicNameValuePair("term", "testArtistName"));
+    }
+
+    @Test
+    void mapArtist_createWithEmpty_artistIsEmpty() {
+        // when
+        var result = target.mapArtist("");
+
+        // then
+        assertThat(result).containsOnly(
+                new BasicNameValuePair("types", "artists"),
+                new BasicNameValuePair("term", ""));
+    }
+}
+
+package com.dharbar.template.service.musicresources.itunes.devapi;
+
+//@Import(DevApiItunesRequestSearcherTest.MyTestConfiguration.class)
+@ActiveProfiles("local")
+class DevApiItunesRequestSearcherITest extends IntegrationTest {
+
+    private static final String TEST_TOKEN = "test token";
+
+    @MockBean
+    private TokenProvider tokenProvider;
+
+    @Autowired
+    private DevApiItunesRequestSearcher target;
+
+    @SneakyThrows
+    @BeforeEach
+    void setUp() {
+        given(tokenProvider.provideToken()).willReturn(TEST_TOKEN);
+    }
+
+    @Test
+    void request_returnErrorMono_tokenException() throws NoTokenException {
+        // given
+        given(tokenProvider.provideToken()).willThrow(NoTokenException.class);
+
+        // when and then
+        StepVerifier.create(target.request(List.of()))
+                .verifyError(NoTokenException.class);
+    }
+
+    @Test
+    void request_emptyMono_unauthorized() {
+        // given
+        wireMockServer.stubFor(get("/search")
+                .withHeader("Authorization", equalTo("Bearer " + TEST_TOKEN))
+                .willReturn(aResponse()
+                        .withStatus(HttpStatus.UNAUTHORIZED.value())));
+
+        // when and then
+        StepVerifier.create(target.request(List.of()))
+                .verifyError(IllegalArgumentException.class);
+    }
+
+    @Test
+    void request_emptyMono_internalServerError() {
+        // given
+        wireMockServer.stubFor(get("/search")
+                .withHeader("Authorization", equalTo("Bearer " + TEST_TOKEN))
+                .willReturn(aResponse()
+                        .withStatus(HttpStatus.INTERNAL_SERVER_ERROR.value())));
+
+        // when and then
+        StepVerifier.create(target.request(List.of()))
+                .verifyError(IllegalArgumentException.class);
+    }
+
+    @Test
+    void request_emptyResult_emptyBody() {
+        // given
+        wireMockServer.stubFor(get("/search")
+                .withHeader("Authorization", equalTo("Bearer " + TEST_TOKEN))
+                .willReturn(aResponse()
+                        .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                        .withBody("{\"results\": {}}")));
+
+        // when and then
+        StepVerifier.create(target.request(List.of()))
+                .assertNext(itunesResult -> assertThat(itunesResult).isEqualTo(ItunesResult.of(null, null)))
+                .verifyComplete();
+    }
+
+    @Test
+    void request_createUrlWithParameters_parametersNotEmpty() {
+        // given
+        wireMockServer.stubFor(get(urlPathEqualTo("/search"))
+                .withQueryParam("testName1", equalTo("testValue1"))
+                .withQueryParam("testName2", equalTo("testValue2"))
+                .withHeader("Authorization", equalTo("Bearer " + TEST_TOKEN))
+                .willReturn(aResponse()
+                        .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                        .withBody("{\"results\": {}}")));
+
+        // when
+        List<NameValuePair> params = List.of(
+                new BasicNameValuePair("testName1", "testValue1"),
+                new BasicNameValuePair("testName2", "testValue2"));
+        Mono<ItunesResult> request = target.request(params);
+
+        // then
+        StepVerifier.create(request)
+                .assertNext(itunesResult -> assertThat(itunesResult).isEqualTo(ItunesResult.of(null, null)))
+                .verifyComplete();
+    }
+
+    @Test
+    void request_parseSongs_songsWasReturned() {
+        // given
+        wireMockServer.stubFor(get(urlPathEqualTo("/search"))
+                .withQueryParam("term", equalTo("songs"))
+                .withHeader("Authorization", equalTo("Bearer " + TEST_TOKEN))
+                .willReturn(aResponse()
+                        .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                        .withBody(jsonFrom("/it/itunes/response/songsResponse.json"))));
+
+        // when
+        Mono<ItunesResult> request = target.request(List.of(new BasicNameValuePair("term", "songs")));
+
+        // then
+        StepVerifier.create(request)
+                .assertNext(itunesResult -> assertThat(itunesResult)
+                        .extracting(ItunesResult::getSongs)
+                        .extracting(ItunesSongs::getData)
+                        .extracting(List::size)
+                        .isEqualTo(2))
+                .verifyComplete();
+    }
+
+    @Test
+    void request_parseArtists_ArtistsWasReturned() {
+        // given
+        wireMockServer.stubFor(get(urlPathEqualTo("/search"))
+                .withQueryParam("term", equalTo("artists"))
+                .withHeader("Authorization", equalTo("Bearer " + TEST_TOKEN))
+                .willReturn(aResponse()
+                        .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                        .withBody(jsonFrom("/it/itunes/response/artistsResponse.json"))));
+
+        // when
+        Mono<ItunesResult> request = target.request(List.of(new BasicNameValuePair("term", "artists")));
+
+        // then
+        StepVerifier.create(request)
+                .assertNext(itunesResult -> assertThat(itunesResult)
+                        .extracting(ItunesResult::getArtists)
+                        .extracting(ItunesArtists::getData)
+                        .extracting(List::size)
+                        .isEqualTo(2))
+                .verifyComplete();
+    }
+
+    @Test
+    void request_parseSongsAndArtists_songsAndArtistsWasReturned() {
+        // given
+        wireMockServer.stubFor(get(urlPathEqualTo("/search"))
+                .withQueryParam("term", equalTo("artists,songs"))
+                .withHeader("Authorization", equalTo("Bearer " + TEST_TOKEN))
+                .willReturn(aResponse()
+                        .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                        .withBody(jsonFrom("/it/itunes/response/artistsAndSongsResponse.json"))));
+
+        // when
+        Mono<ItunesResult> request = target.request(List.of(new BasicNameValuePair("term", "artists,songs")));
+
+        // then
+        StepVerifier.create(request)
+                .assertNext(itunesResult -> assertThat(itunesResult)
+                        .satisfies(result -> {
+                            assertThat(result.getSongs().getData()).hasSize(2);
+                            assertThat(result.getArtists().getData()).hasSize(2);
+                        }))
+                .verifyComplete();
+    }
+}
+
+package com.dharbar.template.service.musicresources.itunes.devapi;
+
+@DisplayNameGeneration(ShouldWhenUnderscoreNameGenerator.class)
+@ExtendWith(MockitoExtension.class)
+class DevApiItunesResourceTest {
+
+    @Mock
+    private DevApiItunesRequestSearcher devApiItunesRequester;
+
+    @Mock
+    private DevApiItunesMusicAttributesMapper musicAttributesMapper;
+
+    @InjectMocks
+    private DevApiItunesResource target;
+
+    @Test
+    void findMelody_fluxError_songIsBlank() {
+        // when and then
+        StepVerifier.create(target.findMelody("", "test"))
+                .verifyError(IllegalArgumentException.class);
+    }
+
+    @Test
+    void findMelody_fluxError_artistIsBlank() {
+        // when and then
+        StepVerifier.create(target.findMelody("test", ""))
+                .verifyError(IllegalArgumentException.class);
+
+        verifyNoInteractions(musicAttributesMapper);
+    }
+
+    @Test
+    void findMelody_returnError_requestIsFailed() {
+        // given
+        given(musicAttributesMapper.mapSong(any())).willReturn(List.of());
+        given(devApiItunesRequester.request(any())).willReturn(Mono.error(new IllegalArgumentException("Fail")));
+
+        // when and then
+        StepVerifier.create(target.findMelody("test", "testSong"))
+                .verifyError(IllegalArgumentException.class);
+
+        verify(musicAttributesMapper).mapSong("test testSong");
+    }
+
+    @Test
+    void findMelody_returnEmpty_responseIsEmptyResult() {
+        // given
+        given(musicAttributesMapper.mapSong(any())).willReturn(List.of());
+        given(devApiItunesRequester.request(any())).willReturn(Mono.just(ItunesResult.of(null, null)));
+
+        // when and then
+        StepVerifier.create(target.findMelody("test", "testSong"))
+                .expectNextCount(0)
+                .verifyComplete();
+
+        verify(musicAttributesMapper).mapSong("test testSong");
+    }
+
+    @Test
+    void findMelody_returnMapped_responseWithSingleResult() {
+        // given
+        given(musicAttributesMapper.mapSong(any())).willReturn(List.of());
+
+        var previews = List.of(ItunesSongsAttributesPreview.of("previewUrl"));
+        var songsAttributes = ItunesSongsAttributes.builder().artistName("testName").previews(previews).build();
+        var songsData = List.of(ItunesSongsData.of(null, null, null, songsAttributes));
+        var itunesArtists = ItunesSongs.of(null, null, songsData);
+        given(devApiItunesRequester.request(any())).willReturn(Mono.just(ItunesResult.of(itunesArtists, null)));
+
+        // when and then
+        var expected = MusicAsResource.builder().artist("testName").fileUrl("previewUrl").build();
+        StepVerifier.create(target.findMelody("test", "testSong"))
+                .expectNext(expected)
+                .verifyComplete();
+
+        verify(musicAttributesMapper).mapSong("test testSong");
+    }
+
+    @Test
+    void findMelody_returnMapped_responseWithMultipleResult() {
+        // given
+        given(musicAttributesMapper.mapSong(any())).willReturn(List.of());
+
+        var previews = List.of(ItunesSongsAttributesPreview.of("previewUrl1"));
+        var songsAttributes1 = ItunesSongsAttributes.builder().artistName("testName1").previews(previews).build();
+        var itunesSongsData1 = ItunesSongsData.of(null, null, null, songsAttributes1);
+        var songsAttributes2 = ItunesSongsAttributes.builder().artistName("testName2").build();
+        var itunesSongsData2 = ItunesSongsData.of(null, null, null, songsAttributes2);
+        var songsData = List.of(itunesSongsData1, itunesSongsData2, itunesSongsData2);
+
+        var itunesArtists = ItunesSongs.of(null, null, songsData);
+        given(devApiItunesRequester.request(any())).willReturn(Mono.just(ItunesResult.of(itunesArtists, null)));
+
+        // when and then
+        var expected = MusicAsResource.builder().artist("testName1").fileUrl("previewUrl1").build();
+        StepVerifier.create(target.findMelody("test", "testSong"))
+                .expectNext(expected)
+                .verifyComplete();
+
+        verify(musicAttributesMapper).mapSong("test testSong");
+    }
+
+    @Test
+    void findBy_fluxError_searchIsBlank() {
+        // when and then
+        StepVerifier.create(target.findBy(""))
+                .verifyError(IllegalArgumentException.class);
+    }
+
+    @Test
+    void findBy_returnError_requestIsFailed() {
+        // given
+        given(musicAttributesMapper.mapSong(any())).willReturn(List.of());
+        given(devApiItunesRequester.request(any())).willReturn(Mono.error(new IllegalArgumentException("Fail")));
+
+        // when and then
+        StepVerifier.create(target.findBy("test"))
+                .verifyError(IllegalArgumentException.class);
+    }
+
+    @Test
+    void findBy_returnEmpty_responseIsEmptyResult() {
+        // given
+        given(musicAttributesMapper.mapSong(any())).willReturn(List.of());
+        given(devApiItunesRequester.request(any())).willReturn(Mono.just(ItunesResult.of(null, null)));
+
+        // when and then
+        StepVerifier.create(target.findBy("test"))
+                .expectNextCount(0)
+                .verifyComplete();
+
+        verify(musicAttributesMapper).mapSong("test");
+    }
+
+    @Test
+    void findBy_returnMapped_responseWithMultipleResult() {
+        // given
+        given(musicAttributesMapper.mapSong(any())).willReturn(List.of());
+
+        var previews = List.of(ItunesSongsAttributesPreview.of("previewUrl1"));
+        var songsAttributes1 = ItunesSongsAttributes.builder().artistName("testName1").previews(previews).build();
+        var itunesSongsData1 = ItunesSongsData.of(null, null, null, songsAttributes1);
+        var songsAttributes2 = ItunesSongsAttributes.builder().artistName("testName2").previews(previews).build();
+        var itunesSongsData2 = ItunesSongsData.of(null, null, null, songsAttributes2);
+        var songsData = List.of(itunesSongsData1, itunesSongsData2, itunesSongsData2);
+
+        var itunesArtists = ItunesSongs.of(null, null, songsData);
+        given(devApiItunesRequester.request(any())).willReturn(Mono.just(ItunesResult.of(itunesArtists, null)));
+
+        // when and then
+        var expected1 = MusicAsResource.builder().artist("testName1").fileUrl("previewUrl1").build();
+        var expected2 = MusicAsResource.builder().artist("testName2").fileUrl("previewUrl1").build();
+        var expected3 = MusicAsResource.builder().artist("testName2").fileUrl("previewUrl1").build();
+        StepVerifier.create(target.findBy("test"))
+                .expectNext(expected1, expected2, expected3)
+                .verifyComplete();
+
+        verify(musicAttributesMapper).mapSong("test");
+    }
+}
+
+package com.dharbar.template.service.musicresources.itunes.devapi;
+
+@DisplayNameGeneration(ShouldWhenUnderscoreNameGenerator.class)
+@ExtendWith(MockitoExtension.class)
+class DevApiItunesSearcherTest {
+
+    @Mock
+    private DevApiItunesRequestSearcher devApiItunesRequester;
+    @Mock
+    private DevApiItunesMusicAttributesMapper musicAttributesMapper;
+
+    @InjectMocks
+    private DevApiItunesSearcher target;
+
+    @Test
+    void findArtist_returnError_artistIsBlank() {
+        // when and then
+        StepVerifier.create(target.findArtist(""))
+                .verifyError(IllegalArgumentException.class);
+    }
+
+    @Test
+    void findArtist_returnError_requestIsFailed() {
+        // given
+        given(musicAttributesMapper.mapArtist(any())).willReturn(List.of());
+        given(devApiItunesRequester.request(any())).willReturn(Mono.error(new IllegalArgumentException("Fail")));
+
+        // when and then
+        StepVerifier.create(target.findArtist("test"))
+                .verifyError(IllegalArgumentException.class);
+
+        verify(musicAttributesMapper).mapArtist("test");
+    }
+
+    @Test
+    void findArtist_returnEmpty_responseIsEmpty() {
+        // given
+        given(musicAttributesMapper.mapArtist(any())).willReturn(List.of());
+        given(devApiItunesRequester.request(any())).willReturn(Mono.just(ItunesResult.of(null, null)));
+
+        // when and then
+        StepVerifier.create(target.findArtist("test"))
+                .expectNextCount(0)
+                .verifyComplete();
+
+        verify(musicAttributesMapper).mapArtist("test");
+    }
+
+    @Test
+    void findArtist_returnNames_responseIsEmpty() {
+        // given
+        given(musicAttributesMapper.mapArtist(any())).willReturn(List.of());
+
+        var artistsAttributes = ItunesArtistsAttributes.of("testName", null, null);
+        var itunesArtists = ItunesArtists.of(null, List.of(ItunesArtistsData.of("id", null, artistsAttributes, null)));
+        given(devApiItunesRequester.request(any())).willReturn(Mono.just(ItunesResult.of(null, itunesArtists)));
+
+        // when and then
+        StepVerifier.create(target.findArtist("test"))
+                .expectNext("testName")
+                .verifyComplete();
+
+        verify(musicAttributesMapper).mapArtist("test");
+    }
+}
+
+package com.dharbar.template.service.musicresources.itunes.devapi.token.generator;
+
+
+@ExtendWith(MockitoExtension.class)
+@DisplayNameGeneration(ShouldWhenUnderscoreNameGenerator.class)
+class SimpleTokenGeneratorTest {
+
+    private TokenGenerator target;
+
+    @SneakyThrows
+    @BeforeEach
+    void setUp() {
+        target = new TokenGenerator();
+    }
+
+    @Test
+    void getToken_returnEmpty_invalidParameters() {
+        // when
+        Optional<String> result = target.getToken("test", "test", "test");
+
+        // then
+        assertThat(result).isEmpty();
+    }
+}
+
+package com.dharbar.template.service.musicresources.itunes.devapi.token;@DisplayNameGeneration(ShouldWhenUnderscoreNameGenerator.class)
+
+@ExtendWith(MockitoExtension.class)
+class TokenProviderTest {
+    private static final String TOKEN = "token";
+
+    @Mock
+    private TokenGenerator tokenGenerator;
+
+    @InjectMocks
+    private TokenProvider target;
+
+    @SneakyThrows
+    @BeforeEach
+    void setUp() {
+        given(tokenGenerator.getToken()).willReturn(Optional.of(TOKEN));
+    }
+
+    @Test
+    void provideToken_returnToken_generatorReturnToken() throws NoTokenException {
+        // when
+        var result = target.provideToken();
+
+        // then
+        assertThat(result).isEqualTo(TOKEN);
+
+        verify(tokenGenerator).getToken();
+    }
+
+    @Test
+    void provideToken_throwException_generatorReturnEmpty() {
+        // given
+        given(tokenGenerator.getToken()).willReturn(Optional.empty());
+
+        // when and then
+        assertThatThrownBy(() -> target.provideToken())
+                .isInstanceOf(NoTokenException.class);
+
+        verify(tokenGenerator).getToken();
+    }
+
+    @Test
+    void provideToken_getFromCache_secondAttemptGetToken() throws NoTokenException {
+        // when
+        target.provideToken();
+        target.provideToken();
+        target.provideToken();
+        var result = target.provideToken();
+
+        // then
+        assertThat(result).isEqualTo(TOKEN);
+
+        // then
+        verify(tokenGenerator).getToken();
+    }
+}
+
+package com.dharbar.template.service.userService.repo;
+
+class LocalUserRepositoryTest {
+
+    private LocalUserRepository target;
+
+    @BeforeEach
+    void setUp() {
+        target = new LocalUserRepository();
+    }
+
+    @Test
+    void getById_returnUser_userIsFound() {
+        // when and then
+        StepVerifier.create(target.getById(1))
+                .expectNext(UserEntity.of(1, "test", "http://test"))
+                .verifyComplete();
+    }
+
+    @Test
+    void save_saveUserAndReturn_repositoryIsSaved() {
+        // when
+        StepVerifier.create(target.save(UserEntity.of(1, "name", "url")))
+                .expectNext(UserEntity.of(1, "name", "url"))
+                .verifyComplete();
+    }
+}
+
+package com.dharbar.template.service.userService;
+
+
+@DisplayNameGeneration(ShouldWhenUnderscoreNameGenerator.class)
+@ExtendWith(MockitoExtension.class)
+class UserServiceTest {
+
+    @Mock
+    private UserRepository repository;
+
+    @InjectMocks
+    private UserService target;
+
+    @Test
+    void getById_returnUser_userIsFound() {
+        // given
+        given(repository.getById(any())).willReturn(Mono.just(UserEntity.of(1, "name", "url")));
+
+        // when and then
+        StepVerifier.create(target.getById(1))
+                .expectNext(User.of("name", "url"))
+                .verifyComplete();
+
+        verify(repository).getById(1);
+    }
+
+    @Test
+    void getById_exception_userIsNotFound() {
+        // given
+        given(repository.getById(any())).willReturn(Mono.empty());
+
+        // when and then
+        StepVerifier.create(target.getById(1))
+                .verifyError(UserNotFoundException.class);
+
+        verify(repository).getById(1);
+    }
+
+    @Test
+    void save_saveUserAndReturn_repositoryIsSaved() {
+        // given
+        given(repository.save(any())).willReturn(Mono.just(UserEntity.of(1, "name", "url")));
+
+        // when
+        StepVerifier.create(target.save(User.of("name", "url")))
+                .expectNext(User.of("name", "url"))
+                .verifyComplete();
+
+        verify(repository).save(any());
+    }
+}
+
+package com.dharbar.template.service;public class WireMockInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
+
+
+    @Override
+    public void initialize(ConfigurableApplicationContext configurableApplicationContext) {
+        WireMockServer wireMockServer = new WireMockServer(new WireMockConfiguration().dynamicPort());
+        wireMockServer.start();
+
+        configurableApplicationContext.getBeanFactory().registerSingleton("wireMockServer", wireMockServer);
+
+        configurableApplicationContext.addApplicationListener(applicationEvent -> {
+            if (applicationEvent instanceof ContextClosedEvent) {
+                wireMockServer.stop();
+            }
+        });
+
+        TestPropertyValues
+                .of("itunes.dev.host=localhost:" + wireMockServer.port())
+                .applyTo(configurableApplicationContext);
+    }
+}
+
+package com.dharbar.template.utils;public class ShouldWhenUnderscoreNameGenerator extends DisplayNameGenerator.Standard {
+
+
+    @Override
+    public String generateDisplayNameForMethod(Class<?> testClass, Method testMethod) {
+        return this.replaceCamelCase(testMethod.getName())
+                + DisplayNameGenerator.parameterTypesAsString(testMethod);
+    }
+
+    private String replaceCamelCase(String methodName) {
+        String[] splitedByUnderscore = methodName.split("_");
+        if (splitedByUnderscore.length != 3) {
+            return methodName;
+        }
+
+        return new StringBuilder(splitedByUnderscore[0])
+                .append(" SHOULD ")
+                .append(fromCamelCase(splitedByUnderscore[1]))
+                .append(" WHEN ")
+                .append(fromCamelCase(splitedByUnderscore[2]))
+                .toString();
+    }
+
+    private StringBuilder fromCamelCase(String camelCase) {
+        StringBuilder result = new StringBuilder();
+        for (char c : camelCase.toCharArray()) {
+            if (Character.isUpperCase(c)) {
+                result.append(' ').append(Character.toLowerCase(c));
+            } else {
+                result.append(c);
+            }
+        }
+        return result;
+    }
+}

@@ -8,12 +8,13 @@ import reactor.core.publisher.Mono;
 
 import java.util.List;
 
-@Profile("mongo")
+@Profile({"mongo", "mongoprod"})
 public interface MelodyPreferenceRepo extends ReactiveMongoRepository<MelodyPref, String> {
 
     Flux<MelodyPref> findAllByArtist(String artist);
 
-    Mono<MelodyPref> getByArtistAndSongName(String artist, String songName);
+    Mono<MelodyPref> getFirstByArtistAndSongName(String artist, String songName);
 
     Flux<MelodyPref> findByTagsContains(List<String> tags);
+
 }

@@ -41,10 +41,10 @@ public class DevApiItunesSearcher implements MusicSearcher {
                 .flatMapMany(this::extractArtistNames);
     }
 
-    private Flux<String> extractSongNames(ItunesResult itunesResult) {
-        return Flux.fromStream(itunesResult.getSongs().getData().stream()
-                .map(itunesArtistsData -> itunesArtistsData.getAttributes().getName()));
-    }
+//    private Flux<String> extractSongNames(ItunesResult itunesResult) {
+//        return Flux.fromStream(itunesResult.getSongs().getData().stream()
+//                .map(itunesArtistsData -> itunesArtistsData.getAttributes().getName()));
+//    }
 
     private Flux<String> extractArtistNames(ItunesResult itunesResult) {
         var itunesArtists = itunesResult == null ? null : itunesResult.getArtists();
