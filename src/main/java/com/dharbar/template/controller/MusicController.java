@@ -1,6 +1,5 @@
 package com.dharbar.template.controller;
 
-import com.dharbar.template.service.melodypref.repo.entity.MelodyPref;
 import com.dharbar.template.service.melodypref.service.MelodyPreferencesService;
 import com.dharbar.template.service.musicresources.SongResource;
 import com.dharbar.template.service.musicresources.dto.MusicAsResource;
@@ -46,14 +45,14 @@ public class MusicController {
 //                                .build()));
 //    }
 
-    @GetMapping("/test")
-    private Flux<String> findByAndPref() {
-        return Flux.just("test2", "test3", "test4", "test5")
-                .log()
-                .flatMap(s -> melodyPreferencesService.findByArtistAndSongNames(s, s)
-                        .log()
-                        .map(MelodyPref::toString));
-    }
+//    @GetMapping("/test")
+//    private Flux<String> findByAndPref() {
+//        return Flux.just("test2", "test3", "test4", "test5")
+//                .log()
+//                .flatMap(s -> melodyPreferencesService.findByArtistAndSongNames(s, s)
+//                        .log()
+//                        .map(MelodyPref::toString));
+//    }
 
 //    @GetMapping("/artists")
 //    private Mono<MusicAsResource> findByArtistAndSongName(@RequestParam String name,

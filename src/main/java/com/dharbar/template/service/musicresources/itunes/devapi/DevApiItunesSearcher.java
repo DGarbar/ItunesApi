@@ -22,13 +22,6 @@ public class DevApiItunesSearcher implements MusicSearcher {
         this.devApiItunesRequester = devApiItunesRequester;
         this.musicAttributesMapper = musicAttributesMapper;
     }
-//
-//    @Override
-//    public Flux<String> findSong(String songName) {
-//        var params = musicAttributesMapper.mapSong(songName);
-//        return openApiItunesRequester.request(params)
-//                .flatMapMany(this::extractSongNames);
-//    }
 
     @Override
     public Flux<String> findArtist(String artist) {

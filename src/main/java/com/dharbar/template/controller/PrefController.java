@@ -3,6 +3,8 @@ package com.dharbar.template.controller;
 import com.dharbar.template.controller.dto.MusicAttributes;
 import com.dharbar.template.service.melodypref.repo.entity.MelodyPref;
 import com.dharbar.template.service.melodypref.service.MusicAttributesPreferencesService;
+import com.dharbar.template.service.musicresources.SongResource;
+import com.dharbar.template.service.musicresources.dto.MusicAsResource;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.MediaType;
@@ -20,10 +22,26 @@ import reactor.core.publisher.Mono;
 public class PrefController {
 
     private final MusicAttributesPreferencesService musicAttributesPreferencesService;
+    private final SongResource songResource;
 
     @PostMapping(produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
     private Flux<MelodyPref> findByMusicAttributes(@RequestBody MusicAttributes musicAttributes) {
         return musicAttributesPreferencesService.findByMusicAttributes(musicAttributes);
+    }
+
+
+    @PostMapping("/music")
+    private Flux<MusicAsResource> findMusicByMusicAttributes(@RequestBody MusicAttributes musicAttributes) {
+        return musicAttributesPreferencesService.findByMusicAttributes(musicAttributes)
+                .flatMap(dbPref -> songResource.findMelody(dbPref.getArtist(), dbPref.getSongName())
+                        .map(musicRes -> MusicAsResource.builder()
+                                .artist(musicRes.getArtist())
+                                .songName(musicRes.getSongName())
+                                .fileUrl(musicRes.getFileUrl())
+                                .trackTimeMillis(musicRes.getTrackTimeMillis())
+                                .genres(musicRes.getGenres())
+                                .tags(dbPref.getTags())
+                                .build()));
     }
 
     @PostMapping("/new")

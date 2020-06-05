@@ -25,7 +25,6 @@ public class MusicAttributesPreferencesService {
     private ReactiveMongoTemplate reactiveMongoTemplate;
     private MelodyPreferenceRepo melodyPreferenceRepo;
 
-
     public Mono<MelodyPref> updateSongs(MelodyPref melodyPref) {
         return melodyPreferenceRepo.getFirstByArtistAndSongName(melodyPref.getArtist(), melodyPref.getSongName())
                 .defaultIfEmpty(melodyPref)
