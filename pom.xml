@@ -23,7 +23,7 @@
         <testcontainers.version>1.14.1</testcontainers.version>
         <wiremock.version>2.26.0</wiremock.version>
         <org.apache.httpcomponents.httpclient.version>4.5.10</org.apache.httpcomponents.httpclient.version>
-        <commons-collections.version>3.2.1</commons-collections.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
         <springdoc-openapi-ui.version>1.3.7</springdoc-openapi-ui.version>
 
         <!-- plugin versions -->
